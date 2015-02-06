@@ -1,2 +1,3 @@
 # Smart-Traffic-Model
-Hello.
+
+This is a great project!
