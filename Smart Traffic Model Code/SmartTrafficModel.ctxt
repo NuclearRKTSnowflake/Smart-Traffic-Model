@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=numCars\ comTime\ numAccidents\ mpg
+comment0.target=SmartTrafficModel(int,\ int,\ int,\ int)
+comment0.text=\r\n\ This\ method\ creates\ the\ Smart\ Traffic\ Model.\r\n\ \r\n\ @param\ numCars\ -\ The\ number\ of\ cars\ passing\ through\ the\ stoplight/intersection.\r\n\ @param\ comTime\ -\ The\ amount\ of\ time\ it\ takes\ for\ a\ car\ to\ commute\ from\ Point\ A\ to\ Point\ B.\r\n\ @param\ numAccidents\ -\ The\ number\ of\ accidents\ at\ the\ stoplight/intersection.\r\n\ @param\ mpg\ -\ The\ gas\ mileage\ (mpg)\ of\ the\ cars\ passing\ through\ the\ stoplight/intersection.\ \r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ This\ method\ runs\ the\ program.\r\n
+comment2.params=
+comment2.target=void\ measureCommutingTime()
+comment2.text=\r\n\ This\ method\ measures\ the\ commuting\ time\ that\ one\ car\ takes\ to\ commute\ from\ Point\ A\ to\ Point\ B\ during\ the\ scenario/simulation.\r\n
+comment3.params=
+comment3.target=void\ measureGasMileage()
+comment3.text=\r\n\ This\ method\ measures\ the\ gas\ mileage\ (mpg)\ of\ the\ cars\ from\ Point\ A\ to\ Point\ B\ during\ the\ scenario/simulation.\r\n
+comment4.params=
+comment4.target=void\ measureNumberOfAccidents()
+comment4.text=\r\n\ This\ method\ measures\ the\ number\ of\ accidents\ that\ occured\ during\ the\ scenario/simulation.\r\n
+numComments=5

@@ -13,3 +13,29 @@ Week #1:
 		http://auto.howstuffworks.com/car-driving-safety/safety-regulatory-devices/question234.htm
 		http://www.siemens.com/innovation/apps/pof_microsite/_pof-spring-2011/_html_en/traffic-systems.html 
 		 
+Week #2:
+	Monday--February 9, 2015
+		Today I continued drafting different traffic scenarios for different traffic light patterns. See
+		Wednesday, February 4, 2015 for details. I also updated my README for the Smart-Traffic-Model 
+		repository to contain a more descriptive description than "This is a great project!". I've also 
+		started brainstorming the outline of my code and thinking about how the code will work. Lastly
+		today, I decided to continue to familiarize myself with GitHub by navigating around and researching
+		websites that can possibly help me with understanding GitHub a little better. I'm starting to 
+		understand some of the basics of GitHub now. I unfortunately had trouble uploading what I have done	
+		to GitHub as I experienced some problems in GitBash. I'll look into that further when I get the 
+		chance.
+	
+	Tuesday--February 10, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+	
+	Wednesday--February 11, 2015
+		Today I created a class named Tester to remind me to create a Tester class that will test my Smart
+		Traffic Model. I haven't started to develop it yet, as I don't really have anything in my Smart
+		Traffic Model class that needs to be tested. I also decided to work on an API with the methods that			clearly outlines what I need to work on instead of shooting in the dark. The API will also contain 	
+		bits of the Proposal. Since I referece the Proposal quite often, I thought it would be a good idea	
+		to stuff some of the Proposal in with the API so I don't have to switch between two Word Documents.
+		I also continued drafting different traffic scenarios for differnt traffic light patterns. The 
+		scenarios are currently on graph paper, although I may decide to see if I can transfer them on the 	
+		computer if I have time, or if necessary. Still had trouble trying to update my updates to the 
+		GitHub website. Hopefully figureing out that problem tomorrow. I also learned that you can import	
+		java.util.Timer. This should be extremely helpful in my project when calculating the commuting time
