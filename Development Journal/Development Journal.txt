@@ -39,3 +39,66 @@ Week #2:
 		computer if I have time, or if necessary. Still had trouble trying to update my updates to the 
 		GitHub website. Hopefully figureing out that problem tomorrow. I also learned that you can import	
 		java.util.Timer. This should be extremely helpful in my project when calculating the commuting time
+	
+	Thursday--February 12, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+	Friday--February 13, 2015
+		Not a real productive day. Just looked at a whole bunch of websites concerning how stoplights
+		operated and brainstormed more traffic scenarios. Couldn't update to GitHub.
+
+	Saturday--February 14, 2015
+		HAPPY VALENTINE'S DAY! <3
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+	Sunday--February 15, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+Week #3:
+
+	Monday--February 16, 2015
+		HAPPY PRESIDENT'S DAY! HAPPY BIRTHDAY WASHINGTON + LINCOLN! 
+		Not a real productive day. Just looked at a whole bunch of websites concerning how stoplights
+		operated and brainstormed more traffic scenarios. Still having trouble uploading to GitHub
+
+	Tuesday--February 17, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+	Wednesday--February 18, 2015
+		Today, I researched more into the java.util.Timer. Timer extends the Object class and also can run
+		as a "daemon". It's methods include:
+		
+		1. void cancel()
+			Terminates the timer, discarding any currently scheduled tasks.
+		2. int purge()
+			Removes all cancelled tasks from this timer's task queue. 
+		3. void schedule(TimerTask task, Date time)
+			Schedules the specified task for execution at the specified time.
+		4. void schedule(TimerTask task, long delay)
+			Schedules the specified task for execution after specified delay.
+		5. void schedule(Timer task, lond delay, long period)
+			Schedules the specified task for repeated fixed-delay execution, beginning at the specified
+			time.
+		6. void scheduleAtFixedRate(TimerTask task, Date firstTime, long period)
+			Schedules the specified task for repeated fixed-rate execution, beginning at the specified
+			time.
+		7. void scheduleAtFixedRate(TimerTask task, long delay, long period)
+			Schedules the specified task for repeated fixed-rate execution, beginning at the specified
+			delay.
+	
+		The Timer class can throw the following exceptions: IllegalArgumentException, IllegalStateException
+		, and NullPointerException.
+
+		I also looked up what a "daemon" is. 
+		A daemon is a divinity or supernatural being of a nature b/w gods and humans, according to ancient 			Greek belief. It is also the archaic spelling of demon. :)
+		HAHAHAHAHAHA!!! Wouldn't that be nice! 
+		A daemon is a computer program that runs as a background process, rather than being under the 
+		direct control of an interective user. 
+		I am not quite sure what the computer definition means; I'm still wrapping my head around that one.
+		Sources:
+		http://docs.oracle.com/javase/7/docs/api/java/util/Timer.html
+	
+	Thursday--February 19, 2015
+		Worked on code. I decided to have my project allow the user to decide what they want the scenario 
+		to be like. The SMT asks for traffic flow. May add more?
+		for traffic flow. 
