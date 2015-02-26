@@ -7,7 +7,7 @@ The Smart Traffic Model will:
 3.	Increase safety.
 4.	Decrease commuting time.
 
-The Smart Traffic Model will directly benefit drivers and benefit pedestrians. With the Smart Traffic Model, drivers should find themselves less frustrated with poor stoplight timing. Drivers should also notice an improvement in their commuting time and fuel usage. On the macroscopic scale, the reduced amount of fuel usage and commuting time will benefit consumers and the economy. The reduction of emissions will additionally help in the abatement of city smog considerably. Timeline
+The Smart Traffic Model will directly benefit drivers and benefit pedestrians. With the Smart Traffic Model, drivers should find themselves less frustrated with poor stoplight timing. Drivers should also notice an improvement in their commuting time and fuel usage. On the macroscopic scale, the reduced amount of fuel usage and commuting time will benefit consumers and the economy. The reduction of emissions will additionally help in the abatement of city smog considerably. 
 
 The Smart Traffic Model is a software program that would alter traffic light patterns through application of a predictive algorithm to achieve the stated objectives. This will be demonstrated on a 25X25 grid displaying different traffic simulations and comparing them to the original stoplight design by measuring:
 1.	Time from Point A to Point B.
