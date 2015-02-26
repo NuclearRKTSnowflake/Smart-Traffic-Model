@@ -2,9 +2,13 @@ SMART TRAFFIC MODEL(SMT)--DEVELOPMENT JOURNAL
 Week #1:
 	Wednesday--February 4, 2015:
 		Today I started drafting different traffic scenarios for different traffic light patterns. 		
+
 		These scenarios will help me test my SMT and see if there has been ay improvement. The scenarios 	
+
 		will also be displayed with my live demonstration, and I will compare them to the original 		
+
 		stoplight designm by measuring time from Point A to Point B, the number of cars passing through the 
+
 		light, the number of wrecks, and the amount of fuel used during the commute. I also started 
 		researching intersection related accidents and current stoplight operations. I found out there has
 		been an idea developing in Houston, Texas that is similair to my SMT. However, the plan is only in
@@ -13,11 +17,17 @@ Week #1:
 		plans on installing a GPS radio devices for first responders(i.e. ambulances and police officers)
 		that will turn an upcoming stoplight green. Siemens also plans to implant an "IntelliDrive" concept	
 		that will send real-time data between vehicles and traffic ligts, alerting the driver that there is 
+
 		a stop ahead. In my research in stop light operation, I learned that there are many ways a 		
+
 		stoplight changes. Some lights don't have any detectors. Rather, they simply operate on timers. The	
+
 		detectors in a some stoplights vary from lasers to rubber hoses filled with air. However, the most	
+
 		common method to detect cars is the inductive loop. An inductve loop is a coil of wire implanted	
+
 		in the road's surface. When the car rolls over these rectangular-shaped deformities in the road,	
+
 		the light is alerted that you are there, and may change green for you.
 		Sources:
 		http://auto.howstuffworks.com/car-driving-safety/safety-regulatory-devices/question234.htm
@@ -163,4 +173,6 @@ Week #4:
 		were the pros and cons of stoplights and how the SMT fixed those problems. I also continued working
 		on my code. It's developing fine, although I am at a loss on how to calculate the fuel usage/mpg.
 		Still cannot update to GitHub with GitBash. I have, however, found a way to update without the 
-		GitBash. I can edit online and commit online! Yay! No more GitBash for Me!
+		GitBash. I can edit online and commit online! Yay! No more GitBash for Me! I also updated my code
+		on Saturday so that the program will print out the variables before and after the SMT. To do this
+		I created two methods for each variable that needs calculated. One for before, and one for after.
