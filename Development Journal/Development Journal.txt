@@ -1,14 +1,34 @@
 SMART TRAFFIC MODEL(SMT)--DEVELOPMENT JOURNAL
 Week #1:
 	Wednesday--February 4, 2015:
-		Today I started drafting different traffic scenarios for different traffic light patterns. 				These scenarios will help me test my SMT and see if there has been ay improvement. The scenarios 			will also be displayed with my live demonstration, and I will compare them to the original 				stoplight designm by measuring time from Point A to Point B, the number of cars passing through the 		light, the number of wrecks, and the amount of fuel used during the commute. I also started 
+		Today I started drafting different traffic scenarios for different traffic light patterns. 		
+
+		These scenarios will help me test my SMT and see if there has been ay improvement. The scenarios 	
+
+		will also be displayed with my live demonstration, and I will compare them to the original 		
+
+		stoplight designm by measuring time from Point A to Point B, the number of cars passing through the 
+
+		light, the number of wrecks, and the amount of fuel used during the commute. I also started 
 		researching intersection related accidents and current stoplight operations. I found out there has
 		been an idea developing in Houston, Texas that is similair to my SMT. However, the plan is only in
 		it's first stage (pilot), and hasn't been fully developed. Their algorithim is ran off of a Linux
 		based computer and operates off of real time, taking data from nearby smartphones. Siemens also 
 		plans on installing a GPS radio devices for first responders(i.e. ambulances and police officers)
 		that will turn an upcoming stoplight green. Siemens also plans to implant an "IntelliDrive" concept	
-		that will send real-time data between vehicles and traffic ligts, alerting the driver that there is 		a stop ahead. In my research in stop light operation, I learned that there are many ways a 				stoplight changes. Some lights don't have any detectors. Rather, they simply operate on timers. The			detectors in a some stoplights vary from lasers to rubber hoses filled with air. However, the most			common method to detect cars is the inductive loop. An inductve loop is a coil of wire implanted			in the road's surface. When the car rolls over these rectangular-shaped deformities in the road,			the light is alerted that you are there, and may change green for you.
+		that will send real-time data between vehicles and traffic ligts, alerting the driver that there is 
+
+		a stop ahead. In my research in stop light operation, I learned that there are many ways a 		
+
+		stoplight changes. Some lights don't have any detectors. Rather, they simply operate on timers. The	
+
+		detectors in a some stoplights vary from lasers to rubber hoses filled with air. However, the most	
+
+		common method to detect cars is the inductive loop. An inductve loop is a coil of wire implanted	
+
+		in the road's surface. When the car rolls over these rectangular-shaped deformities in the road,	
+
+		the light is alerted that you are there, and may change green for you.
 		Sources:
 		http://auto.howstuffworks.com/car-driving-safety/safety-regulatory-devices/question234.htm
 		http://www.siemens.com/innovation/apps/pof_microsite/_pof-spring-2011/_html_en/traffic-systems.html 
@@ -26,12 +46,15 @@ Week #2:
 		chance.
 	
 	Tuesday--February 10, 2015
-		Sadly, I was unable to work on the Smart Traffic Model.
+		:)
+		Sadly, I was unable to work on the Smart Traffic Model. (I'm happy for a different reason)
 	
 	Wednesday--February 11, 2015
 		Today I created a class named Tester to remind me to create a Tester class that will test my Smart
 		Traffic Model. I haven't started to develop it yet, as I don't really have anything in my Smart
-		Traffic Model class that needs to be tested. I also decided to work on an API with the methods that			clearly outlines what I need to work on instead of shooting in the dark. The API will also contain 	
+		Traffic Model class that needs to be tested. I also decided to work on an API with the methods that	
+
+		clearly outlines what I need to work on instead of shooting in the dark. The API will also contain 	
 		bits of the Proposal. Since I referece the Proposal quite often, I thought it would be a good idea	
 		to stuff some of the Proposal in with the API so I don't have to switch between two Word Documents.
 		I also continued drafting different traffic scenarios for differnt traffic light patterns. The 
@@ -90,7 +113,9 @@ Week #3:
 		, and NullPointerException.
 
 		I also looked up what a "daemon" is. 
-		A daemon is a divinity or supernatural being of a nature b/w gods and humans, according to ancient 			Greek belief. It is also the archaic spelling of demon. :)
+		A daemon is a divinity or supernatural being of a nature b/w gods and humans, according to ancient 	
+
+		Greek belief. It is also the archaic spelling of demon. :)
 		HAHAHAHAHAHA!!! Wouldn't that be nice! 
 		A daemon is a computer program that runs as a background process, rather than being under the 
 		direct control of an interective user. 
@@ -99,6 +124,52 @@ Week #3:
 		http://docs.oracle.com/javase/7/docs/api/java/util/Timer.html
 	
 	Thursday--February 19, 2015
+		HAPPY CHINESE NEW YEAR! YEAR OF THE SHEEP/GOAT/RAM!
 		Worked on code. I decided to have my project allow the user to decide what they want the scenario 
-		to be like. The SMT asks for traffic flow. May add more?
-		for traffic flow. 
+		to be like. The SMT asks for traffic flow. May add more questions? I'm working on organizing myself
+		because I'm still unsure on how to code my project, even though I know what to do.
+	
+	Friday--February 20, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+	Saturday--February 21, 2015
+		Today, I updated my code so that the program asks for the time of day instead of traffic flow.
+		I figured that the time of day would affect the traffic flow with various rush hours. To determine
+		the rush hours, I went on Google Maps and used their traffic link to show me at what times of day
+		the traffic was the heaviest. I decided to use three levels of traffic flow: light, moderate, and 
+		heavy. I also decided to use five different times of the day to determine traffic flow. These five 
+		are: 
+
+		1. morning(5:00 A.M. to 9:00 A.M) -- Heavy Traffic
+		2. late morning/afternoon(9:00 A.M. to 2:00 P.M.) -- Light Traffic
+		3. late afternoon(2:00 P.M. to 4:00 P.M.) -- Moderate Traffic
+		4. evening(4:00 P.M. to 8:00 P.M.) -- Heavy Traffic
+		5. night/early morning(8:00 P.M. to 4:00 A.M.) -- Light Traffic
+		 
+		I realize that each different time of day is not in equal increments with the hours. However, I was
+		trying to ensure that the different times of the day is based off of traffic. I'm also working on 
+		the methods that I call from inside the main(String[] args) method. Inside the main method, I 
+		decided to print out the comparisons before the SMT and after the SMT inside each if statement. 
+		
+		I also have tried to no avail to upload to GitHub at home! :(
+	
+		Google Maps (25 Miles):
+			Long Beach, CA
+			Roberto 'Bobby' Salcedo Memorial Hwy & California 60, Rosemead, CA
+		
+	Sunday--February 22, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+Week #4:
+
+	Monday--February 23, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+	Tuesday--February 24, 2015
+		Sadly, I was unable to work on the Smart Traffic Model.
+
+	Wednesday--February 25, 2015
+		Today, I slapped together a rough elevator pitch with a PowerPoint Presentation. All it talked
+		were the pros and cons of stoplights and how the SMT fixed those problems. I also continued working
+		on my code. It's developing fine, although I am at a loss on how to calculate the fuel usage/mpg.
+		Still cannot update to GitHub. I've decided to just upload at school.
