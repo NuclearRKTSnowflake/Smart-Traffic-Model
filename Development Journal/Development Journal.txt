@@ -155,3 +155,6 @@ Week #4:
 
 	Thursday--February 26, 2015
 		I updated my code, and added some spacing so the terminal window looks pretty. :)
+
+	Friday--February 27, 2015
+		Today I worked on my code.
