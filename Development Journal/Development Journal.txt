@@ -154,7 +154,10 @@ Week #4:
 		I created two methods for each variable that needs calculated. One for before, and one for after.
 
 	Thursday--February 26, 2015
-		I updated my code, and added some spacing so the terminal window looks pretty. :)
+		I updated my code, and added some spacing so the terminal window looks pretty. :)		
 
 	Friday--February 27, 2015
-		Today I worked on my code.
+		Today, I worked on my code.
+
+	Saturday--February 28, 2015
+		I researched more about the Timer class.
