@@ -160,4 +160,4 @@ Week #4:
 		Today, I worked on my code.
 
 	Saturday--February 28, 2015
-		I researched more about the Timer class.
+		I researched more about the Timer class. I realized I don't think I need the Timer class after all...
