@@ -43,7 +43,6 @@ Week #2:
 		Today I created a class named Tester to remind me to create a Tester class that will test my Smart
 		Traffic Model. I haven't started to develop it yet, as I don't really have anything in my Smart
 		Traffic Model class that needs to be tested. I also decided to work on an API with the methods that	
-
 		clearly outlines what I need to work on instead of shooting in the dark. The API will also contain 	
 		bits of the Proposal. Since I referece the Proposal quite often, I thought it would be a good idea	
 		to stuff some of the Proposal in with the API so I don't have to switch between two Word Documents.
@@ -138,7 +137,9 @@ Week #3:
 		trying to ensure that the different times of the day is based off of traffic. I'm also working on 
 		the methods that I call from inside the main(String[] args) method. Inside the main method, I 
 		decided to print out the comparisons before the SMT and after the SMT inside each if statement. 
+		
 		I also have tried to no avail to upload to GitHub at home! :(
+	
 		Google Maps (25 Miles):
 			Long Beach, CA
 			Roberto 'Bobby' Salcedo Memorial Hwy & California 60, Rosemead, CA
@@ -170,10 +171,10 @@ Week #4:
 		Today, I worked on my code.
 
 	Saturday--February 28, 2015
-		
 		I researched more about the Timer class. I realized I don't think I need the Timer class after 		
-		all... The Timer class is used if you want a certain method applied after a certain time interval, 
-		etc. However, I only needed to implement a timer to time how long theoretically a car would take 
+		all... The Timer class is used if you want a certain method applied after a certain time interval, 	
+		etc. However, I only needed to implement a timer to time how long theoretically a car would take 	
 		using the SMT. Instead, I created two new state variables, distance and minutes. I was thinking I 
 		could create a loop that would say if distance increases one mile, then minutes increases a few 
-		minutes.
+		minutes. I also used if loops for my measureGasMileage. if(trafficFlow == "light"), then gasUsed is
+		[whatever amount of gas used].
