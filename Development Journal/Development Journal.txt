@@ -101,10 +101,8 @@ Week #3:
 	
 		The Timer class can throw the following exceptions: IllegalArgumentException, IllegalStateException
 		, and NullPointerException.
-
 		I also looked up what a "daemon" is. 
 		A daemon is a divinity or supernatural being of a nature b/w gods and humans, according to ancient 	
-
 		Greek belief. It is also the archaic spelling of demon. :)
 		HAHAHAHAHAHA!!! Wouldn't that be nice! 
 		A daemon is a computer program that runs as a background process, rather than being under the 
@@ -140,9 +138,7 @@ Week #3:
 		trying to ensure that the different times of the day is based off of traffic. I'm also working on 
 		the methods that I call from inside the main(String[] args) method. Inside the main method, I 
 		decided to print out the comparisons before the SMT and after the SMT inside each if statement. 
-		
 		I also have tried to no avail to upload to GitHub at home! :(
-	
 		Google Maps (25 Miles):
 			Long Beach, CA
 			Roberto 'Bobby' Salcedo Memorial Hwy & California 60, Rosemead, CA
