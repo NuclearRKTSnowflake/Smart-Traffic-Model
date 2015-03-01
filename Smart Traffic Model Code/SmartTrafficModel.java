@@ -1,4 +1,3 @@
-import java.util.Timer;
 import java.util.Scanner;
 /**
  * This class represents a Smart Traffic Model.
@@ -17,6 +16,8 @@ public class SmartTrafficModel{
     private static int commutingTime;
     private static int numberOfAccidents;
     private static int milesPerGallon;
+    private static int distance;
+    private static int minutes;
     /**
      * This method creates the Smart Traffic Model.
      * 
@@ -39,10 +40,11 @@ public class SmartTrafficModel{
         Scanner kbReader = new Scanner(System.in);
         String input = "";
         String name = "";
-        String trafficFlow = "";;
+        String trafficFlow = "";
         String timeOfDay = "";
         boolean run = true;
         System.out.println("Welcome to the Smart Traffic Model. Type \"exit\" to exit at any time during the program.");
+        System.out.println("What is your name?");
         input = kbReader.nextLine();
         if(input.equalsIgnoreCase("exit")){
             run = false;
@@ -53,15 +55,13 @@ public class SmartTrafficModel{
             }
             else{
                 name = input;
-                System.out.println("Please select the time of day.");
-                System.out.println("");
+                System.out.println("Thank you, " + name + ". Please select the time of day.");
                 System.out.println("Your choices are:");
                 System.out.println("morning(5:00 A.M. to 9:00 A.M.");//Heavy Rush Hour
                 System.out.println("late morning/afternoon(9:00 P.M. to 2:00 P.M.)");//No Rush Hour
                 System.out.println("late afternoon(2:00 P.M. to 4:00 P.M.)");//Rush Hour
                 System.out.println("evening(5:00 P.M. to 8:00 P.M.)");//Heavy Rush Hour
                 System.out.println("night/early morning(8:00 P.M. to 4:00 A.M.)");//No Rush Hour
-                System.out.println("");
                 input = kbReader.nextLine();
                 if(input.equalsIgnoreCase("exit")){
                     run = false;
@@ -69,77 +69,62 @@ public class SmartTrafficModel{
                 else if(input.equalsIgnoreCase("morning")){
                     trafficFlow = "heavy";
                     timeOfDay = "morning";
-                    System.out.println("");
                     System.out.println("Before SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay));
-                    System.out.println("Gas Mileage: " + measureGasMileageBefore());
+                    System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow));
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore());
-                    System.out.println("");
                     System.out.println("After SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay));
                     System.out.println("Gas Mileage: " + measureGasMileageAfter());
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter());
-                    System.out.println("");
                 }
                 else if(input.equalsIgnoreCase("late morning/afternoon")){
                     trafficFlow = "light";
                     timeOfDay = "late morning/afternoon";
-                    System.out.println("");
                     System.out.println("Before SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay));
-                    System.out.println("Gas Mileage: " + measureGasMileageBefore());
+                    System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow));
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore());
-                    System.out.println("");
                     System.out.println("After SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay));
                     System.out.println("Gas Mileage: " + measureGasMileageAfter());
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter());
-                    System.out.println("");
                 }
                 else if(input.equalsIgnoreCase("late afternoon")){
                     trafficFlow = "moderate";
                     timeOfDay = "late afternoon";
-                    System.out.println("");
                     System.out.println("Before SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay));
-                    System.out.println("Gas Mileage: " + measureGasMileageBefore());
+                    System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow));
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore());
-                    System.out.println("");
                     System.out.println("After SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay));
                     System.out.println("Gas Mileage: " + measureGasMileageAfter());
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter());
-                    System.out.println("");
                 }
                 else if(input.equalsIgnoreCase("evening")){
                     trafficFlow = "heavy";
                     timeOfDay = "evening";
-                    System.out.println("");
                     System.out.println("Before SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay));
-                    System.out.println("Gas Mileage: " + measureGasMileageBefore());
+                    System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow));
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore());
-                    System.out.println("");
                     System.out.println("After SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay));
                     System.out.println("Gas Mileage: " + measureGasMileageAfter());
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter());
-                    System.out.println("");
                 }
                 else if(input.equalsIgnoreCase("night/early morning")){
                     trafficFlow = "light";
                     timeOfDay = "night";
-                    System.out.println("");
                     System.out.println("Before SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay));
-                    System.out.println("Gas Mileage: " + measureGasMileageBefore());
+                    System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow));
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore());
-                    System.out.println("");
                     System.out.println("After SMT is applied:");
                     System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay));
                     System.out.println("Gas Mileage: " + measureGasMileageAfter());
                     System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter());
-                    System.out.println("");
                 }
                 else{
                     System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
@@ -173,10 +158,21 @@ public class SmartTrafficModel{
     /**
      * This method measures the gas mileage (mpg) of the cars from Point A to Point B during the scenario/simulation before the SMT is applied.
      */
-    public static int measureGasMileageBefore(){
+    public static int measureGasMileageBefore(String trafficFlow){
         int milesDriven = 25;
         int gasUsed;
         return milesDriven;
+        /*
+        if(trafficFlow == "light"){
+            gasUsed = 3;
+        }
+        else if(trafficFlow == "moderate"){
+            gasUsed = 5;
+        }
+        else if(trafficFlow == "heavy"){
+            gasUsed = 7;
+        }
+        */
         //Gas varies with traffic flow.
         //Divide gas
     }
