@@ -175,6 +175,7 @@ public class SmartTrafficModel{
         */
         //Gas varies with traffic flow.
         //Divide gas
+        //Calculate gas mileage for all green lights and add on time for every red light.
     }
 
     /**
@@ -184,6 +185,7 @@ public class SmartTrafficModel{
         int numAccidents = 0;;
         return numAccidents;
         //Approximate number of accidents.
+        //Pull up statistics.
     }
     
     /**
@@ -217,6 +219,7 @@ public class SmartTrafficModel{
         return milesDriven;
         //Gas varies with traffic flow.
         //Divide gas
+        //Calculate gas mileage for all green lights and add on time for every red light.
     }
 
     /**
@@ -226,5 +229,6 @@ public class SmartTrafficModel{
         int numAccidents = 0;;
         return numAccidents;
         //Approximate number of accidents.
+        //Pull up statistics.
     }
 }
