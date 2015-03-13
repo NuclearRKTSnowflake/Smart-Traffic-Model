@@ -204,3 +204,25 @@ Week #5:
 		store a couple variables without crashing. I have yet to come up with a legitimate way to calculate 
 		some of my variables. I had a (rare) but nice 30-minute talk with my brother about ideas to 
 		calculate these variables, and he gave me some brilliant advice. I hope to implement them soon.
+
+	Saturday--March 7, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Sunday--March 8, 2015
+		I was unable to work on the Smart Traffic Model.
+
+Week #6:
+	
+	Monday--March 9, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Tuesday--March 10, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Wednesday--March 11, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Thursday--March 12, 2015
+		Today I started fixing my method that measures gas mileage, using the advice my brother gave me.
+		He suggested that I calculate the gas mileage for all green lights and add on time for every red
+		light. 
