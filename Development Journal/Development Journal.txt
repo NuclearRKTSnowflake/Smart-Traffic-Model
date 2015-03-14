@@ -226,3 +226,6 @@ Week #6:
 		Today I started fixing my method that measures gas mileage, using the advice my brother gave me.
 		He suggested that I calculate the gas mileage for all green lights and add on time for every red
 		light. Also created website for the project. Not necessary, but I needed a break.
+		
+	Friday--March 13, 2015
+		Today I continued to implement the method for measuring gas mileage. I also ate pie. :)
