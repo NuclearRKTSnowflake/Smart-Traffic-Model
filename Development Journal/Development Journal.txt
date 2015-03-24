@@ -266,4 +266,14 @@ Week #8: SPRING BREAK!
 		I was unable to work on the Smart Traffic Model.
 
 	Tuesday--March 24, 2015
-		I was unable to work on the Smart Traffic Model.
+		I deleted my Tester method when I figured out I didn't need one because I have a main(String[]args) 
+		method that I use to test. I also added another variable, "city setting", because I have to have
+		an approximation of how many stoplights are in the 25 miles. In metropolis areas, stoplights are 
+		every block, while in rural-er areas, you may not see a stoplight for several miles. I also 
+		decided to change the amount of miles to 10 because 25 was a bit much. 
+		
+		1 Mile in City Blocks: 201 E 72nd St, New York, NY 10021 to 1637-1641 3rd Ave, New York, NY 10128
+		1/2 Mile in City Blocks: 1375 2nd Ave, New York, NY 10021 to 2 E 72nd St, New York, NY 10021
+
+		I worked on the measureGasMileage method, trying to implement the method my brother helped me
+		outline. I also worked on the commutingTime methods using GoogleMaps.	
