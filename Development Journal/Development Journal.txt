@@ -252,7 +252,8 @@ Week #7:
 		I was unable to work on the Smart Traffic Model.
 
 	Friday--March 20, 2015
-		I was unable to work on the Smart Traffic Model.
+		Today, I continued fixing my method for measuring gas mileage. The method still isn't working the 
+		way I'd like it to. I also looked up (and bookmarked) websites to help with the accident methods.
 
 	Saturday--March 21, 2015
 		I was unable to work on the Smart Traffic Model.
@@ -277,3 +278,14 @@ Week #8: SPRING BREAK!
 
 		I worked on the measureGasMileage method, trying to implement the method my brother helped me
 		outline. I also worked on the commutingTime methods using GoogleMaps.	
+
+Week #9:
+	
+	Monday--March 30, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Tuesday--March 31, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Wednesday--April 1, 2015
+		...
