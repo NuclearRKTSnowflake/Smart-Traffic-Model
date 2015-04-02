@@ -33,6 +33,8 @@ public class SmartTrafficModel{
 
     /**
      * This method runs the program.
+     * 
+     * @param args - Not Used.
      */
     public static void main(String[] args){
         Scanner kbReader = new Scanner(System.in);
@@ -246,6 +248,11 @@ public class SmartTrafficModel{
 
     /**
      * This method measures the commuting time that one car takes to commute from Point A to Point B during the scenario/simulation before the SMT is applied.
+     * 
+     * @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
+     * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return commutingTime - The commuting time according to the time of day and the city setting.
      */
     public static int measureCommutingTimeBefore(String timeOfDay, String citySetting){
         if(citySetting == "Urban"){
@@ -287,6 +294,11 @@ public class SmartTrafficModel{
 
     /**
      * This method measures the gas mileage (mpg) of the cars from Point A to Point B during the scenario/simulation before the SMT is applied.
+     * 
+     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
     public static int measureGasMileageBefore(String trafficFlow, String citySetting){
         int milesDriven;
@@ -345,6 +357,11 @@ public class SmartTrafficModel{
 
     /**
      * This method measures the commuting time that one car takes to commute from Point A to Point B during the scenario/simulation after the SMT is applied.
+     * 
+     * @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
+     * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return commutingTime - The commuting time according to the time of day and the city setting.
      */
     public static int measureCommutingTimeAfter(String timeOfDay, String citySetting){
         if(citySetting == "Urban"){
@@ -386,6 +403,11 @@ public class SmartTrafficModel{
 
     /**
      * This method measures the gas mileage (mpg) of the cars from Point A to Point B during the scenario/simulation after the SMT is applied.
+     * 
+     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
     public static int measureGasMileageAfter(String trafficFlow, String citySetting){
         int milesDriven;
