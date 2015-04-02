@@ -288,4 +288,5 @@ Week #9:
 		I was unable to work on the Smart Traffic Model.
 
 	Wednesday--April 1, 2015
-		Today, I added some JavaDoc and fixed some minor changes for the elevator pitch I put together a month ago.
+		Today, I added some JavaDoc and fixed some minor changes for the elevator pitch I put together a
+		month ago.
