@@ -290,3 +290,13 @@ Week #9:
 	Wednesday--April 1, 2015
 		Today, I added some JavaDoc and fixed some minor changes for the elevator pitch I put together a
 		month ago.
+
+	Thursday--April 2, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Friday--April 3, 2015
+		Today, I put together the numberOfAccidentsAfter/numberOfAccidentsBefore methods. They aren't very
+		accurate right now, I just approximated the numbers based off of the data I found on a government
+		website. For next deliverable(May 1), I plan on actually calculating the differences from before
+		and after the SMT is applied. Right now, the methods have the same content in them. I have 
+		everything for my April 3 Deliverable right now.
