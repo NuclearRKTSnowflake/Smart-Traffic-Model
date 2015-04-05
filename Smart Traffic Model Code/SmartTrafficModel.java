@@ -85,7 +85,7 @@ public class SmartTrafficModel{
                         trafficFlow = "heavy";
                         timeOfDay = "morning";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
@@ -347,6 +347,11 @@ public class SmartTrafficModel{
 
     /**
      * This method measures the number of accidents that occured during the scenario/simulation before the SMT is applied.
+     * 
+     * @param trafficFlow - The traffic flow depending on time of day(Light/Moderate/Heavy).
+     * @param citySetting - The city setting(Urban/Suburban).
+     * 
+     * @return numAccidents - The approximate number of accidents before the SMT is applied.
      */
     public static int measureNumberOfAccidentsBefore(String trafficFlow, String citySetting){
         int numAccidents = 0;
@@ -478,6 +483,11 @@ public class SmartTrafficModel{
 
     /**
      * This method measures the number of accidents that occured during the scenario/simulation after the SMT is applied.
+     * 
+     * @param trafficFlow - The traffic flow depnding on time of day(Light/Moderate/Heavy).
+     * @param citySetting - The city setting(Urban/Suburban).
+     * 
+     * @return numberOfAccidents - The approximated number of accidents after the SMT is applied.
      */
     public static int measureNumberOfAccidentsAfter(String trafficFlow, String citySetting){
         int numAccidents = 0;
