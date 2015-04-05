@@ -300,3 +300,14 @@ Week #9:
 		website. For next deliverable(May 1), I plan on actually calculating the differences from before
 		and after the SMT is applied. Right now, the methods have the same content in them. I have 
 		everything for my April 3 Deliverable right now.
+
+	Saturday--April 4, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Sunday--April 5, 2015
+		EASTER!
+		Today, I spent a few hours mulling over a legitimate way (not just approximating) to calculate 				commuting time, gas mileage, and number of accidents after the SMT is applied. I never came up with
+ 		anything, so I decided to work on my Elevator Pitch and insert some animations to make my 
+		presentation much less boring. On that note, I spent a good amount of time trying to get all of my
+		animations to reset. Then I figured out, I could have them "exit". Overall, today was a rather
+		painful day where this project was concerned. Good news: Dad is smoking a holiday ham. :)
