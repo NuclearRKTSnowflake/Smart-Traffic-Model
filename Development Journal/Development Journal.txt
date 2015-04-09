@@ -1,5 +1,11 @@
 SMART TRAFFIC MODEL(SMT)--DEVELOPMENT JOURNAL
 Week #1:
+	Monday--February 2, 2015:
+		I was unable to work on the Smart Traffic Model.
+
+	Tuesday--February 3, 2015:
+		I was unable to work on the Smart Traffic Model.
+
 	Wednesday--February 4, 2015:
 		Today I started drafting different traffic scenarios for different traffic light patterns. 		
 		These scenarios will help me test my SMT and see if there has been ay improvement. The scenarios 	
@@ -21,8 +27,19 @@ Week #1:
 		the light is alerted that you are there, and may change green for you.
 		Sources:
 		http://auto.howstuffworks.com/car-driving-safety/safety-regulatory-devices/question234.htm
-		http://www.siemens.com/innovation/apps/pof_microsite/_pof-spring-2011/_html_en/traffic-systems.html 
-		 
+		http://www.siemens.com/innovation/apps/pof_microsite/_pof-spring-2011/_html_en/traffic-systems.html
+
+	Thursday--February 5, 2015:
+		I was unable to work on the Smart Traffic Model.
+
+	Friday--February 6, 2015:
+		I was unable to work on the Smart Traffic Model.
+
+	Saturday--February 7, 2015:
+		I was unable to work on the Smart Traffic Model.
+
+	Sunday--February 8, 2015:
+		I was unable to work on the Smart Traffic Model.		 
 Week #2:
 	Monday--February 9, 2015
 		Today I continued drafting different traffic scenarios for different traffic light patterns. See
@@ -325,4 +342,6 @@ Week #10:
 		I was unable to work on the Smart Traffic Model.
 
 	Thursday--April 9, 2015
-		Today...
+		Today, I spent another good chunk of time trying to figure out a legitimate way (not just
+		approximating) to calculate commuting time, gas mileage, and number of accidents after the SMT is 
+		applied. I am still unsure. :(
