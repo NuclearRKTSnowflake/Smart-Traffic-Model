@@ -345,3 +345,8 @@ Week #10:
 		Today, I spent another good chunk of time trying to figure out a legitimate way (not just
 		approximating) to calculate commuting time, gas mileage, and number of accidents after the SMT is 
 		applied. I am still unsure. :(
+
+	Friday--April 10, 2015
+		Today, I researched more data on accidents. Turns out that 52.5% of accidents occur at traffic
+		lights. Also, 36% of car accidents happen at intersections. I researched more, but haven't figured
+		out a way to incorporate all of this into my code.
