@@ -379,7 +379,7 @@ public class SmartTrafficModel{
         }
         return numAccidents;
         //Approximate number of accidents.
-        //Pull up statistics.
+        //Pull up statistics. Done.
     }
 
     /**
@@ -515,6 +515,6 @@ public class SmartTrafficModel{
         }
         return numAccidents;
         //Approximate number of accidents.
-        //Pull up statistics.
+        //Pull up statistics. Done
     }
 }
