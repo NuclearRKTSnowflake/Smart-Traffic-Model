@@ -350,3 +350,11 @@ Week #10:
 		Today, I researched more data on accidents. Turns out that 52.5% of accidents occur at traffic
 		lights. Also, 36% of car accidents happen at intersections. I researched more, but haven't figured
 		out a way to incorporate all of this into my code.
+
+	Saturday--April 11, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Sunday--April 12, 2015
+		Today, I learned that 47% of crashes are angle crashes and 6% of crashes are rear-end crashes.
+		This is interesting because traffic lights are supposed to decrease the amount of angle crashes and
+		increase the number of rear-end crashes. 
