@@ -379,7 +379,7 @@ public class SmartTrafficModel{
         }
         return numAccidents;
         //Approximate number of accidents.
-        //Pull up statistics. Done.
+        //Pull up statistics.
     }
 
     /**
@@ -393,36 +393,36 @@ public class SmartTrafficModel{
     public static int measureCommutingTimeAfter(String timeOfDay, String citySetting){
         if(citySetting == "Urban"){
             if(timeOfDay == "morning"){ //Heavy Rush Hour
-                commutingTime = 105; //60 + (0.75)(60)
+                commutingTime = 74; //30% of 105
             }
             else if(timeOfDay == "late morning/afternoon"){ //No Rush Hour
-                commutingTime = 60; //6 minutes per block
+                commutingTime = 42; //30% of 60
             }
             else if(timeOfDay == "late afternoon"){ //Rush Hour
-                commutingTime = 90; //60 + (0.50)(60)
+                commutingTime = 63; //30% of 90
             }
             else if(timeOfDay == "evening"){ //Heavy Rush Hour
-                commutingTime = 105; //60 + (0.75)(60)
+                commutingTime = 74; //30% of 105
             }
             else if(timeOfDay == "night"){ //No Rush Hour
-                commutingTime = 60; //6 minutes per block
+                commutingTime = 42; //30% of 60
             }
         }
         else if(citySetting == "Suburban"){
             if(timeOfDay == "morning"){
-                commutingTime = 45; 
+                commutingTime = 32; //30% of 45
             }
             else if(timeOfDay == "late morning/afternoon"){
-                commutingTime = 20; //2 minutes per block
+                commutingTime = 14; //30% of 20
             }
             else if(timeOfDay == "late afternoon"){
-                commutingTime = 30;
+                commutingTime = 21; //30% of 30
             }
             else if(timeOfDay == "evening"){
-                commutingTime = 45;
+                commutingTime = 32; //30% of 45
             }
             else if(timeOfDay == "night"){
-                commutingTime = 20; //2 minutes per block
+                commutingTime = 14; //30% of 20
             }
         }
         return commutingTime;
@@ -451,11 +451,11 @@ public class SmartTrafficModel{
                 gasMileage = milesDriven / gasUsed;
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 5;
+                gasUsed = 4; //5 - 1
                 gasMileage = milesDriven / gasUsed;
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 7;
+                gasUsed = 5; //7 - 2
                 gasMileage = milesDriven / gasUsed;
             }
         }
@@ -467,11 +467,11 @@ public class SmartTrafficModel{
                 gasMileage = milesDriven / gasUsed;
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 5;
+                gasUsed = 4; //5 - 1
                 gasMileage = milesDriven / gasUsed;
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 7;
+                gasUsed = 5; //7 - 2
                 gasMileage = milesDriven / gasUsed;
             }
         }
@@ -493,28 +493,28 @@ public class SmartTrafficModel{
         int numAccidents = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                numAccidents = 1;
+                numAccidents = 0; //1 - 0
             }
             else if(trafficFlow == "moderate"){
-                numAccidents = 3;
+                numAccidents = 2; //3 - 2
             }
             else if(trafficFlow == "heavy"){
-                numAccidents = 5;
+                numAccidents = 4; //5 - 1
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                numAccidents = 0;
+                numAccidents = 0; //0
             }
             else if(trafficFlow == "moderate"){
-                numAccidents = 2;
+                numAccidents = 1; //2 - 1
             }
             else if(trafficFlow == "heavy"){
-                numAccidents = 4;
+                numAccidents = 3; // 4 - 1
             }
         }
         return numAccidents;
         //Approximate number of accidents.
-        //Pull up statistics. Done
+        //Pull up statistics.
     }
 }
