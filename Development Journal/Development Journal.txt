@@ -358,3 +358,25 @@ Week #10:
 		Today, I learned that 47% of crashes are angle crashes and 6% of crashes are rear-end crashes.
 		This is interesting because traffic lights are supposed to decrease the amount of angle crashes and
 		increase the number of rear-end crashes. 
+Week #11:
+	
+	Monday--April 13, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Tuesday--April 14, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Wednesday--April 15, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Thursday--April 16, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Friday--April 17, 2015
+		Today, I was able to make up reasonable numbers for the improvement methods of my project code. For 
+		the commuting time, I took 30% off of all the times. For the gas mileage, I cut down the gas used by
+		1-2. For the number of accidents, I subtracted the "before" number by 1, and that became the 
+		improvement. I'm also thinking of adding another variable, such as smog, to add to my project. It 
+		would be calculated through the gas mileage. The higher the gas mileage, the lower the smog is. I
+		would need to figure out some sort of calculation that I could reasonable predict the variable with.
+		I should implement another variable next week.
