@@ -360,8 +360,8 @@ public class SmartTrafficModel{
     /**
      * This method measures the number of accidents that occured during the scenario/simulation before the SMT is applied.
      * 
-     * @param trafficFlow - The traffic flow depending on time of day(Light/Moderate/Heavy).
-     * @param citySetting - The city setting(Urban/Suburban).
+     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
      * 
      * @return numAccidents - The approximate number of accidents before the SMT is applied.
      */
@@ -496,8 +496,8 @@ public class SmartTrafficModel{
     /**
      * This method measures the number of accidents that occured during the scenario/simulation after the SMT is applied.
      * 
-     * @param trafficFlow - The traffic flow depnding on time of day(Light/Moderate/Heavy).
-     * @param citySetting - The city setting(Urban/Suburban).
+     * @param trafficFlow - The traffic flow depnding on time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
      * 
      * @return numberOfAccidents - The approximated number of accidents after the SMT is applied.
      */
@@ -532,6 +532,10 @@ public class SmartTrafficModel{
     
     /**
      * This method creates a webpage representation of the results
+     * 
+     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     * @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
+     * @param citySetting - The city setting (Urban/Suburban).
      */
     public static void exportAsHTML(String trafficFlow, String timeOfDay, String citySetting){
         File f = new File("list.html");
