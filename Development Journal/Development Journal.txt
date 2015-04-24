@@ -380,3 +380,33 @@ Week #11:
 		would be calculated through the gas mileage. The higher the gas mileage, the lower the smog is. I
 		would need to figure out some sort of calculation that I could reasonable predict the variable with.
 		I should implement another variable next week.
+
+	Saturday--April 18, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Sunday--April 19, 2015
+		I was unable to work on the Smart Traffic Model.
+
+Week #12:
+
+	Monday--April 20, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Tuesday--April 21, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Wednesday--April 22, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Thursday--April 23, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Friday--April 24, 2015
+		Today, I added an exportAsHTML() method. I thought that a webpage would be a good addition, and it
+		looks a lot better than the terminal window. At first, BlueJ was giving me a "cannot find symbol - 
+		variable timeOfDay", and whenever I try to put it into the parameter of the method, it messes up the
+		code. The I realized that I need to put 'String' in front of the parameters. BlueJ then decide to 
+		give me this error: "unreported exception java.io.IOEception; must be caught or declared to be 
+		thrown". I tried deleting the throws IOException from the exportAsHTML() method, but then BlueJ told 
+		me the exact same error. I then tried try-catch methods, but I think I did them wrong, because they
+		didn't work at all.
