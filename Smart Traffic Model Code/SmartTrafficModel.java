@@ -546,8 +546,8 @@ public class SmartTrafficModel{
         pw.println("<head>");
         pw.println("<title>Smart Traffic Model (SMT)</title>");
         pw.println("</head>");
-        pw.println("<body style = \"background-color:#F0FFFF\">");
-        pw.println("<h1 style = \"color:#6C2DC7\">Smart Traffic Model Results</h1>");
+        pw.println("<body style = \"background-color:#F0FFFF\">"); //Azure
+        pw.println("<h1 style = \"color:#0C090A\">Smart Traffic Model Results</h1>"); //Night
         pw.println("<hr/>");
         pw.println("<ol>");
         pw.println("<li>" + measureCommutingTimeBefore(timeOfDay, citySetting) + "</li>");
