@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 /**
  * This class represents a Smart Traffic Model.
  *
@@ -94,6 +96,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late morning/afternoon")){
                         trafficFlow = "light";
@@ -108,6 +111,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late afternoon")){
                         trafficFlow = "moderate";
@@ -122,6 +126,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("evening")){
                         trafficFlow = "heavy";
@@ -136,6 +141,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("night/early morning")){
                         trafficFlow = "light";
@@ -150,6 +156,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else{
                         System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
@@ -181,6 +188,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late morning/afternoon")){
                         trafficFlow = "light";
@@ -195,6 +203,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late afternoon")){
                         trafficFlow = "moderate";
@@ -209,6 +218,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("evening")){
                         trafficFlow = "heavy";
@@ -223,6 +233,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("night/early morning")){
                         trafficFlow = "light";
@@ -237,6 +248,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
+                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else{
                         System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
@@ -516,5 +528,34 @@ public class SmartTrafficModel{
         return numAccidents;
         //Approximate number of accidents.
         //Pull up statistics.
+    }
+    
+    /**
+     * This method creates a webpage representation of the results
+     */
+    public static void exportAsHTML(String trafficFlow, String timeOfDay, String citySetting){
+        File f = new File("list.html");
+        FileWriter fw = new FileWriter(f);
+        PrintWriter pw = new PrintWriter(fw);
+        pw.println("<!DOCTYPE html>");
+        pw.println("<html>");
+        pw.println("<head>");
+        pw.println("<title>Smart Traffic Model (SMT)</title>");
+        pw.println("</head>");
+        pw.println("<body style = \"background-color:#F0FFFF\">");
+        pw.println("<h1 style = \"color:#6C2DC7\">Smart Traffic Model Results</h1>");
+        pw.println("<hr/>");
+        pw.println("<ol>");
+        pw.println("<li>" + measureCommutingTimeBefore(timeOfDay, citySetting) + "</li>");
+        pw.println("<li>" + measureGasMileageBefore(trafficFlow, citySetting) + "</li>");
+        pw.println("<li>" + measureNumberOfAccidentsBefore(timeOfDay, citySetting) + "</li>");
+        pw.println("<li>" + measureCommutingTimeAfter(timeOfDay, citySetting) + "</li>");
+        pw.println("<li>" + measureGasMileageAfter(trafficFlow, citySetting) + "</li>");
+        pw.println("<li>" + measureNumberOfAccidentsAfter(timeOfDay, citySetting) + "</li>");
+        pw.println("</ol>");
+        pw.println("</body>");
+        pw.println("</html>");
+        pw.close();
+        fw.close();
     }
 }
