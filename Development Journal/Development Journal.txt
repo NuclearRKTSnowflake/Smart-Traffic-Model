@@ -408,5 +408,7 @@ Week #12:
 		code. The I realized that I need to put 'String' in front of the parameters. BlueJ then decide to 
 		give me this error: "unreported exception java.io.IOEception; must be caught or declared to be 
 		thrown". I tried deleting the throws IOException from the exportAsHTML() method, but then BlueJ told 
-		me the exact same error. I then tried try-catch methods, but I think I did them wrong, because they
-		didn't work at all.
+		me the exact same error. I then tried try-catch methods and I got compiler errors such as:"exception
+		java.io.IOException is never thrown in body of corresponding try statement" and "catch without try". 
+		I feel like I'm doing them wrong, and I've spent quite a bit of time trying to figure them out. I
+		don't even know if I need try-catch statements.
