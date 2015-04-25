@@ -529,7 +529,7 @@ public class SmartTrafficModel{
         //Approximate number of accidents.
         //Pull up statistics.
     }
-    
+
     /**
      * This method creates a webpage representation of the results
      * 
@@ -550,12 +550,17 @@ public class SmartTrafficModel{
         pw.println("<h1 style = \"color:#0C090A\">Smart Traffic Model Results</h1>"); //Night
         pw.println("<hr/>");
         pw.println("<ol>");
-        pw.println("<li>" + measureCommutingTimeBefore(timeOfDay, citySetting) + "</li>");
-        pw.println("<li>" + measureGasMileageBefore(trafficFlow, citySetting) + "</li>");
-        pw.println("<li>" + measureNumberOfAccidentsBefore(timeOfDay, citySetting) + "</li>");
-        pw.println("<li>" + measureCommutingTimeAfter(timeOfDay, citySetting) + "</li>");
-        pw.println("<li>" + measureGasMileageAfter(trafficFlow, citySetting) + "</li>");
-        pw.println("<li>" + measureNumberOfAccidentsAfter(timeOfDay, citySetting) + "</li>");
+        try{ //Is this necessary?
+            pw.println("<li>" + measureCommutingTimeBefore(timeOfDay, citySetting) + "</li>");
+            pw.println("<li>" + measureGasMileageBefore(trafficFlow, citySetting) + "</li>");
+            pw.println("<li>" + measureNumberOfAccidentsBefore(timeOfDay, citySetting) + "</li>");
+            pw.println("<li>" + measureCommutingTimeAfter(timeOfDay, citySetting) + "</li>");
+            pw.println("<li>" + measureGasMileageAfter(trafficFlow, citySetting) + "</li>");
+            pw.println("<li>" + measureNumberOfAccidentsAfter(timeOfDay, citySetting) + "</li>");
+        }
+        catch(IOException e){
+            System.out.println(e.getMessage());
+        }
         pw.println("</ol>");
         pw.println("</body>");
         pw.println("</html>");
