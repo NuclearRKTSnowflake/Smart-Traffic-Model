@@ -412,3 +412,26 @@ Week #12:
 		java.io.IOException is never thrown in body of corresponding try statement" and "catch without try". 
 		I feel like I'm doing them wrong, and I've spent quite a bit of time trying to figure them out. I
 		don't even know if I need try-catch statements.
+
+Week #13:
+
+	Monday--April 27, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Tuesday--April 28, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Wednesday--April 29, 2015
+		I was unable to work on the Smart Traffic Model.
+
+	Thursday--April 30, 2015
+		Today, I commented out the exportAsHTML() method because I couldn't check to see if my other methods
+		compiled. I wanted to have somewhat of an idea of "improvements" because making up numbers for my
+		"after" methods seemed wrong to me. So, I decided to implement a couple new methods. Two of them 
+		are named timeAtGreenStoplight() and timeAtRedStopLights. As their name implies, these methods 
+		approximates the time it takes to pass through and intersection on a green light and how long it 
+		takes to sit at a red light depending on the traffic flow and city setting. I also decided to put
+		in methods that "simulate" real-life traffic situations. So far, I only have the regular "before"
+		simulation, but hopefully tomorrow (or tonight, it depends), I can add more. I feel as if I need
+		another variable for traffic situations, but I think that I'll keep everything the same right now,
+		and when I show the results, show the improvements for each traffic situation.
