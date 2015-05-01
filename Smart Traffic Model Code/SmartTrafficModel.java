@@ -17,7 +17,7 @@ public class SmartTrafficModel{
     private static int numberOfCars;
     private static int commutingTime;
     private static int numberOfAccidents;
-    private static int milesPerGallon;
+    private static int gasMileage;
     /**
      * This method creates the Smart Traffic Model.
      * 
@@ -30,7 +30,7 @@ public class SmartTrafficModel{
         numCars = numberOfCars;
         comTime = commutingTime;
         numAccidents = numberOfAccidents;
-        mpg = milesPerGallon;
+        mpg = gasMileage;
     }
 
     /**
@@ -96,7 +96,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late morning/afternoon")){
                         trafficFlow = "light";
@@ -111,7 +111,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late afternoon")){
                         trafficFlow = "moderate";
@@ -126,7 +126,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("evening")){
                         trafficFlow = "heavy";
@@ -141,7 +141,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("night/early morning")){
                         trafficFlow = "light";
@@ -156,7 +156,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else{
                         System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
@@ -188,7 +188,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late morning/afternoon")){
                         trafficFlow = "light";
@@ -203,7 +203,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("late afternoon")){
                         trafficFlow = "moderate";
@@ -218,7 +218,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("evening")){
                         trafficFlow = "heavy";
@@ -233,7 +233,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else if(input.equalsIgnoreCase("night/early morning")){
                         trafficFlow = "light";
@@ -248,7 +248,7 @@ public class SmartTrafficModel{
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
                         System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
                         System.out.println("");
-                        exportAsHTML(trafficFlow, timeOfDay, citySetting);
+                        //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
                     else{
                         System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
@@ -529,42 +529,155 @@ public class SmartTrafficModel{
         //Approximate number of accidents.
         //Pull up statistics.
     }
-
+    
+    ///**
+     //* This method creates a webpage representation of the results
+     //* 
+     //* @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     //* @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
+     //* @param citySetting - The city setting (Urban/Suburban).
+     //*/
+    //public static void exportAsHTML(String trafficFlow, String timeOfDay, String citySetting){
+        //File f = new File("list.html");
+        //FileWriter fw = new FileWriter(f);
+        //PrintWriter pw = new PrintWriter(fw);
+        //pw.println("<!DOCTYPE html>");
+        //pw.println("<html>");
+        //pw.println("<head>");
+        //pw.println("<title>Smart Traffic Model (SMT)</title>");
+        //pw.println("</head>");
+        //pw.println("<body style = \"background-color:#F0FFFF\">"); //Azure
+        //pw.println("<h1 style = \"color:#0C090A\">Smart Traffic Model Results</h1>"); //Night
+        //pw.println("<hr/>");
+        //pw.println("<ol>");
+        //try{ //Is this necessary?
+            //pw.println("<li>" + measureCommutingTimeBefore(timeOfDay, citySetting) + "</li>");
+            //pw.println("<li>" + measureGasMileageBefore(trafficFlow, citySetting) + "</li>");
+            //pw.println("<li>" + measureNumberOfAccidentsBefore(timeOfDay, citySetting) + "</li>");
+            //pw.println("<li>" + measureCommutingTimeAfter(timeOfDay, citySetting) + "</li>");
+            //pw.println("<li>" + measureGasMileageAfter(trafficFlow, citySetting) + "</li>");
+            //pw.println("<li>" + measureNumberOfAccidentsAfter(timeOfDay, citySetting) + "</li>");
+        //}
+        //catch(IOException e){
+            //System.out.println(e.getMessage());
+        //}
+        //pw.println("</ol>");
+        //pw.println("</body>");
+        //pw.println("</html>");
+        //pw.close();
+        //fw.close();
+    //}
+    
     /**
-     * This method creates a webpage representation of the results
+     * This method approximates the time it takes to pass through a green stop light depending on the traffic flow and city setting.
      * 
      * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
-     * @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
      * @param citySetting - The city setting (Urban/Suburban).
      */
-    public static void exportAsHTML(String trafficFlow, String timeOfDay, String citySetting){
-        File f = new File("list.html");
-        FileWriter fw = new FileWriter(f);
-        PrintWriter pw = new PrintWriter(fw);
-        pw.println("<!DOCTYPE html>");
-        pw.println("<html>");
-        pw.println("<head>");
-        pw.println("<title>Smart Traffic Model (SMT)</title>");
-        pw.println("</head>");
-        pw.println("<body style = \"background-color:#F0FFFF\">"); //Azure
-        pw.println("<h1 style = \"color:#0C090A\">Smart Traffic Model Results</h1>"); //Night
-        pw.println("<hr/>");
-        pw.println("<ol>");
-        try{ //Is this necessary?
-            pw.println("<li>" + measureCommutingTimeBefore(timeOfDay, citySetting) + "</li>");
-            pw.println("<li>" + measureGasMileageBefore(trafficFlow, citySetting) + "</li>");
-            pw.println("<li>" + measureNumberOfAccidentsBefore(timeOfDay, citySetting) + "</li>");
-            pw.println("<li>" + measureCommutingTimeAfter(timeOfDay, citySetting) + "</li>");
-            pw.println("<li>" + measureGasMileageAfter(trafficFlow, citySetting) + "</li>");
-            pw.println("<li>" + measureNumberOfAccidentsAfter(timeOfDay, citySetting) + "</li>");
+    public static int timeAtGreenStoplight(String trafficFlow, String citySetting){
+        int timeTaken = 0;
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+               timeTaken = 10; //seconds
+            }
+            else if(trafficFlow == "moderate"){
+                timeTaken = 20; //seconds
+            }
+            else if(trafficFlow == "heavy"){
+                timeTaken = 45; //seconds
+            }
         }
-        catch(IOException e){
-            System.out.println(e.getMessage());
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                 timeTaken = 5; //seconds
+            }
+            else if(trafficFlow == "moderate"){
+                timeTaken = 10; //seconds
+            }
+            else if(trafficFlow == "heavy"){
+                timeTaken = 30; //seconds
+            }
         }
-        pw.println("</ol>");
-        pw.println("</body>");
-        pw.println("</html>");
-        pw.close();
-        fw.close();
+        return timeTaken;
+    }
+    
+    /**
+     * This method approximates the time it takes to wait at a red stop light depending on the traffic flow and city setting.
+     * 
+     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int timeAtRedStoplight(String trafficFlow, String citySetting){
+        //Red lights typically don't last longer than 1 1/2 to 2 minutes in heavy traffic.
+        int timeTaken = 0;
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                timeTaken = 45; //seconds
+            }
+            else if(trafficFlow == "moderate"){
+                timeTaken = 85; //seconds
+            }
+            else if(trafficFlow == "heavy"){
+                timeTaken = 120; //seconds
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                timeTaken = 30; //seconds
+            }
+            else if(trafficFlow == "moderate"){
+                timeTaken = 60; //seconds
+            }
+            else if(trafficFlow == "heavy"){
+                timeTaken = 100; //seconds
+            }
+        }
+        return timeTaken;
+    }
+
+    //The following methods pertain to different possible traffic light simulations that will allow me to obtain approximate results.
+    
+    /**
+     * This method represents the "before" going ten blocks. 
+     * Alternate Red-Green.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static void regular(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                commutingTime = (timeAtRedStoplight("light", "Urban") * 5) + (timeAtGreenStoplight("light", "Urban") * 5);
+                gasMileage = measureGasMileageBefore("light","Urban");
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 5) + (timeAtGreenStoplight("moderate", "Urban") * 5);
+                gasMileage = measureGasMileageBefore("moderate","Urban");
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 5) + (timeAtGreenStoplight("heavy", "Urban") * 5);
+                gasMileage = measureGasMileageBefore("heavy","Urban");
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                commutingTime = (timeAtRedStoplight("light", "Suburban") * 5) + (timeAtGreenStoplight("light", "Suburban") * 5);
+                gasMileage = measureGasMileageBefore("light","Suburban");
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 5) + (timeAtGreenStoplight("moderate", "Suburban") * 5);
+                gasMileage = measureGasMileageBefore("moderate","Suburban");
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
+            }
+            else if(trafficFlow == "heavy"){
+                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 5) + (timeAtGreenStoplight("heavy", "Suburban") * 5);
+                gasMileage = measureGasMileageBefore("heavy","Suburban");
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Suburban");
+            }
+        }
     }
 }
