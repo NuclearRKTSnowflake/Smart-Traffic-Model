@@ -1,8 +1,7 @@
 SMART TRAFFIC MODEL (SMT) by SIERRA KNOWLES
 
 IMPORTANT DATES:
-1. April 7 - Elevator Pitch due!!!
-2. May 27 - Final Presentation Due/Presented/Recorded!!!
+1. May 27 - Final Presentation Due/Presented/Recorded!!!
 
 PROJECT TITLE: Smart Traffic Model (SMT)
 PURPOSE OF PROJECT: See below headings
