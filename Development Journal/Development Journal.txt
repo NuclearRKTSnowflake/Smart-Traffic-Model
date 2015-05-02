@@ -435,3 +435,11 @@ Week #13:
 		simulation, but hopefully tomorrow (or tonight, it depends), I can add more. I feel as if I need
 		another variable for traffic situations, but I think that I'll keep everything the same right now,
 		and when I show the results, show the improvements for each traffic situation.
+
+	Friday--May 1, 2015
+		Today, I kept on working on the improvements with traffic simulations. I created methods for a 
+		"better" traffic simulation, and the "best" traffic simultaion. Some methods have cross traffic 
+		methods, because the amount of red and green lights are different with cross traffic. So far, only
+		the commuting time is really accurate; the gas mileage and the number of accidents are not really
+		all that accurate. I probably will create more methods that measure the amount of gas burned at a 
+		single red light, just like I did with the time taken at a red/green light.
