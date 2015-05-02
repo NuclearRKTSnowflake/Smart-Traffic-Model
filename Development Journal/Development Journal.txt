@@ -446,3 +446,9 @@ Week #13:
 		created a method that did the same thing with number of accidents. With the gas used, I've run into
 		a problem; The numbers I'm calculating are doubles and not integers. I'm not really sure I want to
 		change my whole program to deal with doubles, but that may end up happening.
+
+	Saturday--May 2, 2015
+		Today, I started working on my final presentation powerpoint. I also fixed some of my methods so
+		that they were more accurate, and changed my "before" methods to match the same units ad the "after"
+		methods. Tomorrow, I'm going to change my time it takes to cross a stoplight, to time it takes to
+		go a block.
