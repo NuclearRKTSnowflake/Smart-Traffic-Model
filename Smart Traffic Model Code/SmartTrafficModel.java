@@ -572,13 +572,15 @@ public class SmartTrafficModel{
      * @return gasUsed - The approximated gas wasted while idling at a red light.
      */
     public static int gasUsedAtRedStoplight(String trafficFlow, String citySetting){
+        //A quarter of a gallon is wasted every 15 minutes.
+        //Source: http://boston.cbslocal.com/2011/01/31/curious-about-how-much-gas-is-used-while-idling-car/
         int gasUsed = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasUsed = 0;
+                gasUsed = 0; //0.0125
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 0;
+                gasUsed = 0; //0.0236
             }
             else if(trafficFlow == "heavy"){
                 gasUsed = 0;
