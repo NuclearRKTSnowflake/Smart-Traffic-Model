@@ -262,7 +262,7 @@ public class SmartTrafficModel{
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
      * 
-     * @return commutingTime - The commuting time according to the time of day and the city setting.
+     * @return commutingTime - The approximated commuting time according to the time of day and the city setting.
      */
     public static int measureCommutingTimeBefore(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -462,6 +462,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return timeTaken - The approximated time it takes to pass through a green stop light.
      */
     public static int timeAtGreenStoplight(String trafficFlow, String citySetting){
         int timeTaken = 0;
@@ -489,12 +491,14 @@ public class SmartTrafficModel{
         }
         return timeTaken;
     }
-    
+
     /**
      * This method approximates the time it takes to wait at a red stop light depending on the traffic flow and city setting.
      * 
      * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return timeTaken - The approximated time taken waiting at a red stop light.
      */
     public static int timeAtRedStoplight(String trafficFlow, String citySetting){
         //Red lights typically don't last longer than 1 1/2 to 2 minutes in heavy traffic.
@@ -524,14 +528,86 @@ public class SmartTrafficModel{
         return timeTaken;
     }
 
+    /**
+     * This method approximates the amount of gas used to pass through a green stop light depending on the traffic flow and city setting.
+     * 
+     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasUsed - The approximated gas used at passing through a green stop light.
+     */
+    public static int gasUsedAtGreenStoplight(String trafficFlow, String citySetting){
+        int gasUsed = 0;
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "moderate"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "heavy"){
+                gasUsed = 0;
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "moderate"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "heavy"){
+                gasUsed = 0;
+            }
+        }
+        return gasUsed;
+    }
+    
+    /**
+     * This method approximates the amount of gas used at a red stop light depending on traffic flow and city setting.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasUsed - The approximated gas wasted while idling at a red light.
+     */
+    public static int gasUsedAtRedStoplight(String trafficFlow, String citySetting){
+        int gasUsed = 0;
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "moderate"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "heavy"){
+                gasUsed = 0;
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "moderate"){
+                gasUsed = 0;
+            }
+            else if(trafficFlow == "heavy"){
+                gasUsed = 0;
+            }
+        }
+        return gasUsed;
+    }
+    
     //The following methods pertain to different possible traffic light simulations that will allow me to obtain approximate results.
     
     /**
-     * This method represents the "before" going ten blocks commuting time. 
+     * This method representing the "best" traffic simulation.
      * Alternate Red-Green.
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return commutingTime - The approximated commuting time for 5 green lights and 5 red lights.
      */
     public static int bestCommutingTime(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -561,11 +637,13 @@ public class SmartTrafficModel{
     }
     
     /**
-     * This method represents the "before" going ten blocks gas mileage. 
+     * This method represents the "best" traffic simulation.
      * Alternate Red-Green.
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasMileage - The approximated gas mileage for 5 green lights and 5 red lights.
      */
     public static int bestGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -595,11 +673,13 @@ public class SmartTrafficModel{
     }
     
     /**
-     * This method represents the "before" going ten blocks number of accidents. 
+     * This method represents the "best" traffic simulation.
      * Alternate Red-Green.
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @param numberOfAccidents - The approximated number of accidents for 5 green lights and 5 red lights.
      */
     public static int bestNumberOfAccidents(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -633,6 +713,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return commutingTime - The approximated commuting time for 7 green lights and 3 red lights.
      */
     public static void betterCommutingTime(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -665,6 +747,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return commutingTime - The approximated commuting time for 3 green lights and 7 red lights for the cross traffic.
      */
     public static void betterCommutingTimeCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -697,6 +781,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasMileage - The approximated gas mileage for 7 green lights and 3 red lights.
      */
     public static int betterGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -730,6 +816,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return gasMileage - The approximated gas mileage for 3 green lights and 7 red lights for cross traffic.
      */
     public static int betterGasMileageCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -763,6 +851,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return numberOfAccidents - The approximated number of accidents for 7 green lights and 3 red lights.
      */
     public static int betterNumberOfAccidents(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
@@ -796,6 +886,8 @@ public class SmartTrafficModel{
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
+     * 
+     * @return numberOfAccidents - The approximated number of accidents for 3 green lights and 7 red lights for cross traffic.
      */
     public static int betterNumberOfAccidentsCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
