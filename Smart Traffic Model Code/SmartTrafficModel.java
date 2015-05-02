@@ -64,6 +64,7 @@ public class SmartTrafficModel{
                 System.out.println("");
                 input = kbReader.nextLine();
                 if(input.equalsIgnoreCase("exit")){
+                    System.out.println("Thank you for using the SMT.");
                     run = false;
                 }
                 else if(input.equalsIgnoreCase("urban")){
@@ -79,6 +80,7 @@ public class SmartTrafficModel{
                     System.out.println("");
                     input = kbReader.nextLine();
                     if(input.equalsIgnoreCase("exit")){
+                        System.out.println("Thank you for using the SMT.");
                         run = false;
                     }
                     else if(input.equalsIgnoreCase("morning")){
@@ -86,13 +88,13 @@ public class SmartTrafficModel{
                         timeOfDay = "morning";
                         System.out.println("");
                         System.out.println("Before SMT is applied (Approximated Calculations):");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -101,13 +103,13 @@ public class SmartTrafficModel{
                         timeOfDay = "late morning/afternoon";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -116,13 +118,13 @@ public class SmartTrafficModel{
                         timeOfDay = "late afternoon";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -131,13 +133,13 @@ public class SmartTrafficModel{
                         timeOfDay = "evening";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -146,13 +148,13 @@ public class SmartTrafficModel{
                         timeOfDay = "night";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -171,6 +173,7 @@ public class SmartTrafficModel{
                     System.out.println("");
                     input = kbReader.nextLine();
                     if(input.equalsIgnoreCase("exit")){
+                        System.out.println("Thank you for using the SMT.");
                         run = false;
                     }
                     else if(input.equalsIgnoreCase("morning")){
@@ -178,13 +181,13 @@ public class SmartTrafficModel{
                         timeOfDay = "morning";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -193,13 +196,13 @@ public class SmartTrafficModel{
                         timeOfDay = "late morning/afternoon";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -208,13 +211,13 @@ public class SmartTrafficModel{
                         timeOfDay = "late afternoon";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -223,13 +226,13 @@ public class SmartTrafficModel{
                         timeOfDay = "evening";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -238,13 +241,13 @@ public class SmartTrafficModel{
                         timeOfDay = "night";
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
-                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(timeOfDay, citySetting));
+                        System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
                         System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(timeOfDay, citySetting));
+                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -267,13 +270,13 @@ public class SmartTrafficModel{
     public static int measureCommutingTimeBefore(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = 60; //6 minutes per block
+                commutingTime = 40; //40 //4 minutes per block
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = 90; //60 + (0.50)(60)
+                commutingTime = 80; //80 //60 + (0.50)(60)
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = 105; //60 + (0.75)(60)
+                commutingTime = 95; //95 //60 + (0.75)(60)
             }
         }
         else if(citySetting == "Suburban"){
@@ -543,10 +546,10 @@ public class SmartTrafficModel{
                 gasUsed = 0;
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 0;
+                gasUsed = 1;
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 0;
+                gasUsed = 2;
             }
         }
         else if(citySetting == "Suburban"){
@@ -557,7 +560,7 @@ public class SmartTrafficModel{
                 gasUsed = 0;
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 0;
+                gasUsed = 1;
             }
         }
         return gasUsed;
@@ -583,18 +586,18 @@ public class SmartTrafficModel{
                 gasUsed = 0; //0.0236
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 0;
+                gasUsed = 0; //0.0333
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasUsed = 0;
+                gasUsed = 0; //0.008333
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 0;
+                gasUsed = 0; //0.01666
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 0;
+                gasUsed = 0; //0.02777
             }
         }
         return gasUsed;
@@ -615,10 +618,10 @@ public class SmartTrafficModel{
                 numberOfCrashes = 0;
             }
             else if(trafficFlow == "moderate"){
-                numberOfCrashes = 0;
+                numberOfCrashes = 1;
             }
             else if(trafficFlow == "heavy"){
-                numberOfCrashes = 0;
+                numberOfCrashes = 2;
             }
         }
         else if(citySetting == "Suburban"){
@@ -629,7 +632,7 @@ public class SmartTrafficModel{
                 numberOfCrashes = 0;
             }
             else if(trafficFlow == "heavy"){
-                numberOfCrashes = 0;
+                numberOfCrashes = 1;
             }
         }
         return numberOfCrashes;
@@ -650,10 +653,10 @@ public class SmartTrafficModel{
                 numberOfCrashes = 0;
             }
             else if(trafficFlow == "moderate"){
-                numberOfCrashes = 0;
+                numberOfCrashes = 1;
             }
             else if(trafficFlow == "heavy"){
-                numberOfCrashes = 0;
+                numberOfCrashes = 2;
             }
         }
         else if(citySetting == "Suburban"){
@@ -664,7 +667,7 @@ public class SmartTrafficModel{
                 numberOfCrashes = 0;
             }
             else if(trafficFlow == "heavy"){
-                numberOfCrashes = 0;
+                numberOfCrashes = 1;
             }
         }
         return numberOfCrashes;
@@ -755,7 +758,7 @@ public class SmartTrafficModel{
     public static int bestGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 5) + (gasUsedAtGreenStoplight("light", "Urban") * 5);
+                gasMileage = (timeAtRedStoplight("light", "Urban") * 5) + (timeAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
                 gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 5) + (gasUsedAtGreenStoplight("moderate", "Urban") * 5);
