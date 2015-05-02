@@ -441,5 +441,8 @@ Week #13:
 		"better" traffic simulation, and the "best" traffic simultaion. Some methods have cross traffic 
 		methods, because the amount of red and green lights are different with cross traffic. So far, only
 		the commuting time is really accurate; the gas mileage and the number of accidents are not really
-		all that accurate. I probably will create more methods that measure the amount of gas burned at a 
-		single red light, just like I did with the time taken at a red/green light.
+		all that accurate. I created more methods that measure the amount of gas burned at a 
+		single red light and green light, just like I did with the time taken at a red/green light. I also
+		created a method that did the same thing with number of accidents. With the gas used, I've run into
+		a problem; The numbers I'm calculating are doubles and not integers. I'm not really sure I want to
+		change my whole program to deal with doubles, but that may end up happening.
