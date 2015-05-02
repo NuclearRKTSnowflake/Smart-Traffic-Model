@@ -14,7 +14,6 @@ import java.io.*;
  * @version 1
  */
 public class SmartTrafficModel{
-    private static int numberOfCars;
     private static int commutingTime;
     private static int numberOfAccidents;
     private static int gasMileage;
@@ -26,8 +25,7 @@ public class SmartTrafficModel{
      * @param numAccidents - The number of accidents at the stoplight/intersection.
      * @param mpg - The gas mileage (mpg) of the cars passing through the stoplight/intersection. 
      */
-    public SmartTrafficModel(int numCars, int comTime, int numAccidents, int mpg){
-        numCars = numberOfCars;
+    public SmartTrafficModel(int comTime, int numAccidents, int mpg){
         comTime = commutingTime;
         numAccidents = numberOfAccidents;
         mpg = gasMileage;
@@ -261,44 +259,32 @@ public class SmartTrafficModel{
     /**
      * This method measures the commuting time that one car takes to commute from Point A to Point B during the scenario/simulation before the SMT is applied.
      * 
-     * @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
      * 
      * @return commutingTime - The commuting time according to the time of day and the city setting.
      */
-    public static int measureCommutingTimeBefore(String timeOfDay, String citySetting){
+    public static int measureCommutingTimeBefore(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
-            if(timeOfDay == "morning"){ //Heavy Rush Hour
-                commutingTime = 105; //60 + (0.75)(60)
+            if(trafficFlow == "light"){
+                 commutingTime = 60; //6 minutes per block
             }
-            else if(timeOfDay == "late morning/afternoon"){ //No Rush Hour
-                commutingTime = 60; //6 minutes per block
-            }
-            else if(timeOfDay == "late afternoon"){ //Rush Hour
+            else if(trafficFlow == "moderate"){
                 commutingTime = 90; //60 + (0.50)(60)
             }
-            else if(timeOfDay == "evening"){ //Heavy Rush Hour
-                commutingTime = 105; //60 + (0.75)(60)
-            }
-            else if(timeOfDay == "night"){ //No Rush Hour
-                commutingTime = 60; //6 minutes per block
+            else if(trafficFlow == "heavy"){
+                 commutingTime = 105; //60 + (0.75)(60)
             }
         }
         else if(citySetting == "Suburban"){
-            if(timeOfDay == "morning"){
-                commutingTime = 45; 
-            }
-            else if(timeOfDay == "late morning/afternoon"){
+            if(trafficFlow == "light"){
                 commutingTime = 20; //2 minutes per block
             }
-            else if(timeOfDay == "late afternoon"){
+            else if(trafficFlow == "moderate"){
                 commutingTime = 30;
             }
-            else if(timeOfDay == "evening"){
-                commutingTime = 45;
-            }
-            else if(timeOfDay == "night"){
-                commutingTime = 20; //2 minutes per block
+            else if(trafficFlow == "heavy"){
+                commutingTime = 45; 
             }
         }
         return commutingTime;
@@ -397,47 +383,14 @@ public class SmartTrafficModel{
     /**
      * This method measures the commuting time that one car takes to commute from Point A to Point B during the scenario/simulation after the SMT is applied.
      * 
-     * @param timeOfDay - The time of day (Morning/Late Morning-Afternoon/Late Afternoon/Evening/Night)
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
      * 
      * @return commutingTime - The commuting time according to the time of day and the city setting.
      */
-    public static int measureCommutingTimeAfter(String timeOfDay, String citySetting){
-        if(citySetting == "Urban"){
-            if(timeOfDay == "morning"){ //Heavy Rush Hour
-                commutingTime = 74; //30% of 105
-            }
-            else if(timeOfDay == "late morning/afternoon"){ //No Rush Hour
-                commutingTime = 42; //30% of 60
-            }
-            else if(timeOfDay == "late afternoon"){ //Rush Hour
-                commutingTime = 63; //30% of 90
-            }
-            else if(timeOfDay == "evening"){ //Heavy Rush Hour
-                commutingTime = 74; //30% of 105
-            }
-            else if(timeOfDay == "night"){ //No Rush Hour
-                commutingTime = 42; //30% of 60
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(timeOfDay == "morning"){
-                commutingTime = 32; //30% of 45
-            }
-            else if(timeOfDay == "late morning/afternoon"){
-                commutingTime = 14; //30% of 20
-            }
-            else if(timeOfDay == "late afternoon"){
-                commutingTime = 21; //30% of 30
-            }
-            else if(timeOfDay == "evening"){
-                commutingTime = 32; //30% of 45
-            }
-            else if(timeOfDay == "night"){
-                commutingTime = 14; //30% of 20
-            }
-        }
-        return commutingTime;
+    public static int measureCommutingTimeAfter(String trafficFlow, String citySetting){
+       commutingTime = bestCommutingTime(trafficFlow, citySetting);
+       return commutingTime;
     }
 
     /**
@@ -449,48 +402,8 @@ public class SmartTrafficModel{
      * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
     public static int measureGasMileageAfter(String trafficFlow, String citySetting){
-        int milesDriven;
-        int numOfStopLights; //1 stoplight per block
-        //Short city blocks: 20 city blocks per mile (A standard Manhattan City Block is 264 ft by 900 ft)
-        //Long city blocks: 10 city blocks per mile
-        int gasUsed;
-        int gasMileage = 0; //Average across board is approx. 25
-        if(citySetting == "Urban"){
-            milesDriven = 10; //One Mile is approx. 20 short city blocks or 10 long city blocks.
-            numOfStopLights = 200;
-            if(trafficFlow == "light"){
-                gasUsed = 2;
-                gasMileage = milesDriven / gasUsed;
-            }
-            else if(trafficFlow == "moderate"){
-                gasUsed = 4; //5 - 1
-                gasMileage = milesDriven / gasUsed;
-            }
-            else if(trafficFlow == "heavy"){
-                gasUsed = 5; //7 - 2
-                gasMileage = milesDriven / gasUsed;
-            }
-        }
-        else if(citySetting == "Suburban"){
-            milesDriven = 10; //One Mile is 1 sub block.
-            numOfStopLights = 10;
-            if(trafficFlow == "light"){
-                gasUsed = 2;
-                gasMileage = milesDriven / gasUsed;
-            }
-            else if(trafficFlow == "moderate"){
-                gasUsed = 4; //5 - 1
-                gasMileage = milesDriven / gasUsed;
-            }
-            else if(trafficFlow == "heavy"){
-                gasUsed = 5; //7 - 2
-                gasMileage = milesDriven / gasUsed;
-            }
-        }
-        return gasMileage;       
-        //Gas varies with traffic flow.
-        //Divide gas
-        //Calculate gas mileage for all green lights and add on time for every red light.
+        gasMileage = bestGasMileage(trafficFlow, citySetting);
+        return gasMileage;
     }
 
     /**
@@ -502,32 +415,8 @@ public class SmartTrafficModel{
      * @return numberOfAccidents - The approximated number of accidents after the SMT is applied.
      */
     public static int measureNumberOfAccidentsAfter(String trafficFlow, String citySetting){
-        int numAccidents = 0;
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numAccidents = 0; //1 - 0
-            }
-            else if(trafficFlow == "moderate"){
-                numAccidents = 2; //3 - 2
-            }
-            else if(trafficFlow == "heavy"){
-                numAccidents = 4; //5 - 1
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numAccidents = 0; //0
-            }
-            else if(trafficFlow == "moderate"){
-                numAccidents = 1; //2 - 1
-            }
-            else if(trafficFlow == "heavy"){
-                numAccidents = 3; // 4 - 1
-            }
-        }
-        return numAccidents;
-        //Approximate number of accidents.
-        //Pull up statistics.
+        numberOfAccidents = bestNumberOfAccidents(trafficFlow, citySetting);
+        return numberOfAccidents;
     }
     
     ///**
@@ -638,46 +527,299 @@ public class SmartTrafficModel{
     //The following methods pertain to different possible traffic light simulations that will allow me to obtain approximate results.
     
     /**
-     * This method represents the "before" going ten blocks. 
+     * This method represents the "before" going ten blocks commuting time. 
      * Alternate Red-Green.
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
      */
-    public static void regular(String trafficFlow, String citySetting){
+    public static int bestCommutingTime(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
                 commutingTime = (timeAtRedStoplight("light", "Urban") * 5) + (timeAtGreenStoplight("light", "Urban") * 5);
-                gasMileage = measureGasMileageBefore("light","Urban");
-                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
             }
             else if(trafficFlow == "moderate"){
                 commutingTime = (timeAtRedStoplight("moderate", "Urban") * 5) + (timeAtGreenStoplight("moderate", "Urban") * 5);
-                gasMileage = measureGasMileageBefore("moderate","Urban");
-                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
             }
             else if(trafficFlow == "heavy"){
                 commutingTime = (timeAtRedStoplight("heavy", "Urban") * 5) + (timeAtGreenStoplight("heavy", "Urban") * 5);
-                gasMileage = measureGasMileageBefore("heavy","Urban");
-                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
                 commutingTime = (timeAtRedStoplight("light", "Suburban") * 5) + (timeAtGreenStoplight("light", "Suburban") * 5);
-                gasMileage = measureGasMileageBefore("light","Suburban");
-                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
             }
             else if(trafficFlow == "moderate"){
                 commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 5) + (timeAtGreenStoplight("moderate", "Suburban") * 5);
-                gasMileage = measureGasMileageBefore("moderate","Suburban");
-                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
             }
             else if(trafficFlow == "heavy"){
                 commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 5) + (timeAtGreenStoplight("heavy", "Suburban") * 5);
+            }
+        }
+        return commutingTime;
+        //Same for cross traffic.
+    }
+    
+    /**
+     * This method represents the "before" going ten blocks gas mileage. 
+     * Alternate Red-Green.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int bestGasMileage(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                gasMileage = measureGasMileageBefore("light","Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                gasMileage = measureGasMileageBefore("moderate","Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                gasMileage = measureGasMileageBefore("heavy","Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                gasMileage = measureGasMileageBefore("light","Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                gasMileage = measureGasMileageBefore("moderate","Suburban");
+            }
+            else if(trafficFlow == "heavy"){
                 gasMileage = measureGasMileageBefore("heavy","Suburban");
+            }
+        }
+        return gasMileage;
+        //Same for cross traffic.
+    }
+    
+    /**
+     * This method represents the "before" going ten blocks number of accidents. 
+     * Alternate Red-Green.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int bestNumberOfAccidents(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
+            }
+            else if(trafficFlow == "heavy"){
                 numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Suburban");
             }
         }
+        return numberOfAccidents;
+    }
+    
+    /**
+     * This method represents a traffic simulation.
+     * Alternate 1 Red-2 Green.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static void betterCommutingTime(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                commutingTime = (timeAtRedStoplight("light", "Urban") * 3) + (timeAtGreenStoplight("light", "Urban") * 7);
+            }
+            else if(trafficFlow == "moderate"){
+                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 3) + (timeAtGreenStoplight("moderate", "Urban") * 7);
+            }
+            else if(trafficFlow == "heavy"){
+                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 3) + (timeAtGreenStoplight("heavy", "Urban") * 7);
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                commutingTime = (timeAtRedStoplight("light", "Suburban") * 3) + (timeAtGreenStoplight("light", "Suburban") * 7);
+            }
+            else if(trafficFlow == "moderate"){
+                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 3) + (timeAtGreenStoplight("moderate", "Suburban") * 7);
+            }
+            else if(trafficFlow == "heavy"){
+                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 3) + (timeAtGreenStoplight("heavy", "Suburban") * 7);
+            }
+        }
+    }
+    
+    /**
+     * This method represents a traffic simulation.
+     * Alternate 1 Red-2 Green for cross traffic.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static void betterCommutingTimeCross(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                commutingTime = (timeAtRedStoplight("light", "Urban") * 7) + (timeAtGreenStoplight("light", "Urban") * 3);
+            }
+            else if(trafficFlow == "moderate"){
+                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 7) + (timeAtGreenStoplight("moderate", "Urban") * 3);
+            }
+            else if(trafficFlow == "heavy"){
+                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 7) + (timeAtGreenStoplight("heavy", "Urban") * 3);
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                commutingTime = (timeAtRedStoplight("light", "Suburban") * 7) + (timeAtGreenStoplight("light", "Suburban") * 3);
+            }
+            else if(trafficFlow == "moderate"){
+                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 7) + (timeAtGreenStoplight("moderate", "Suburban") * 3);
+            }
+            else if(trafficFlow == "heavy"){
+                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 7) + (timeAtGreenStoplight("heavy", "Suburban") * 3);
+            }
+        }
+    }
+    
+    /**
+     * This method represents a traffic simulation.
+     * Alternate 1 Red-2 Green.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int betterGasMileage(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                gasMileage = measureGasMileageBefore("light","Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                gasMileage = measureGasMileageBefore("moderate","Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                gasMileage = measureGasMileageBefore("heavy","Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                gasMileage = measureGasMileageBefore("light","Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                gasMileage = measureGasMileageBefore("moderate","Suburban");
+            }
+            else if(trafficFlow == "heavy"){
+                gasMileage = measureGasMileageBefore("heavy","Suburban");
+            }
+        }
+        return gasMileage;
+    }
+    
+    /**
+     * This method represents a traffic simulation.
+     * Alternate 1 Red-2 Green for cross traffic.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int betterGasMileageCross(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                gasMileage = measureGasMileageBefore("light","Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                gasMileage = measureGasMileageBefore("moderate","Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                gasMileage = measureGasMileageBefore("heavy","Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                gasMileage = measureGasMileageBefore("light","Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                gasMileage = measureGasMileageBefore("moderate","Suburban");
+            }
+            else if(trafficFlow == "heavy"){
+                gasMileage = measureGasMileageBefore("heavy","Suburban");
+            }
+        }
+        return gasMileage;
+    }
+    
+    /**
+     * This method represents the "before" going ten blocks number of accidents. 
+     * Alternate 1 Red-2 Green.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int betterNumberOfAccidents(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
+            }
+            else if(trafficFlow == "heavy"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Suburban");
+            }
+        }
+        return numberOfAccidents;
+    }
+    
+    /**
+     * This method represents the "before" going ten blocks number of accidents. 
+     * Alternate 1 Red-2 Green for cross traffic.
+     * 
+     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
+     * @param citySetting - The city setting (Urban/Suburban).
+     */
+    public static int betterNumberOfAccidentsCross(String trafficFlow, String citySetting){
+        if(citySetting == "Urban"){
+            if(trafficFlow == "light"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
+            }
+            else if(trafficFlow == "moderate"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
+            }
+            else if(trafficFlow == "heavy"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
+            }
+        }
+        else if(citySetting == "Suburban"){
+            if(trafficFlow == "light"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
+            }
+            else if(trafficFlow == "moderate"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
+            }
+            else if(trafficFlow == "heavy"){
+                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Suburban");
+            }
+        }
+        return numberOfAccidents;
     }
 }
