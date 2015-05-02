@@ -961,24 +961,24 @@ public class SmartTrafficModel{
     public static int betterGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = measureGasMileageBefore("light","Urban");
+                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 3) + (gasUsedAtGreenStoplight("light", "Urban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = measureGasMileageBefore("moderate","Urban");
+                gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 3) + (gasUsedAtGreenStoplight("moderate", "Urban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = measureGasMileageBefore("heavy","Urban");
+                gasMileage = (gasUsedAtRedStoplight("heavy", "Urban") * 3) + (gasUsedAtGreenStoplight("heavy", "Urban") * 7);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = measureGasMileageBefore("light","Suburban");
+                gasMileage = (gasUsedAtRedStoplight("light", "Suburban") * 3) + (gasUsedAtGreenStoplight("light", "Suburban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = measureGasMileageBefore("moderate","Suburban");
+                gasMileage = (gasUsedAtRedStoplight("moderate", "Suburban") * 3) + (gasUsedAtGreenStoplight("moderate", "Suburban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = measureGasMileageBefore("heavy","Suburban");
+                gasMileage = (gasUsedAtRedStoplight("heavy", "Suburban") * 3) + (gasUsedAtGreenStoplight("heavy", "Suburban") * 7);
             }
         }
         return gasMileage;
@@ -996,24 +996,24 @@ public class SmartTrafficModel{
     public static int betterGasMileageCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = measureGasMileageBefore("light","Urban");
+                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 7) + (gasUsedAtGreenStoplight("light", "Urban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = measureGasMileageBefore("moderate","Urban");
+                gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 7) + (gasUsedAtGreenStoplight("moderate", "Urban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = measureGasMileageBefore("heavy","Urban");
+                gasMileage = (gasUsedAtRedStoplight("heavy", "Urban") * 7) + (gasUsedAtGreenStoplight("heavy", "Urban") * 3);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = measureGasMileageBefore("light","Suburban");
+                gasMileage = (gasUsedAtRedStoplight("light", "Suburban") * 7) + (gasUsedAtGreenStoplight("light", "Suburban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = measureGasMileageBefore("moderate","Suburban");
+                gasMileage = (gasUsedAtRedStoplight("moderate", "Suburban") * 7) + (gasUsedAtGreenStoplight("moderate", "Suburban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = measureGasMileageBefore("heavy","Suburban");
+                gasMileage = (gasUsedAtRedStoplight("heavy", "Suburban") * 7) + (gasUsedAtGreenStoplight("heavy", "Suburban") * 3);
             }
         }
         return gasMileage;
@@ -1031,24 +1031,24 @@ public class SmartTrafficModel{
     public static int betterNumberOfAccidents(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Urban") * 3) + (numberOfAccidentsAtGreenStoplight("light", "Urban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Urban") * 3) + (numberOfAccidentsAtGreenStoplight("moderate", "Urban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Urban") * 3) + (numberOfAccidentsAtGreenStoplight("heavy", "Urban") * 7);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Suburban") * 3) + (numberOfAccidentsAtGreenStoplight("light", "Suburban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Suburban") * 3) + (numberOfAccidentsAtGreenStoplight("moderate", "Suburban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Suburban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Suburban") * 3) + (numberOfAccidentsAtGreenStoplight("heavy", "Suburban") * 7);
             }
         }
         return numberOfAccidents;
@@ -1066,24 +1066,24 @@ public class SmartTrafficModel{
     public static int betterNumberOfAccidentsCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Urban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Urban") * 7) + (numberOfAccidentsAtGreenStoplight("light", "Urban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Urban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Urban") * 7) + (numberOfAccidentsAtGreenStoplight("moderate", "Urban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Urban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Urban") * 7) + (numberOfAccidentsAtGreenStoplight("heavy", "Urban") * 3);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("light", "Suburban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Suburban") * 7) + (numberOfAccidentsAtGreenStoplight("light", "Suburban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("moderate", "Suburban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Suburban") * 7) + (numberOfAccidentsAtGreenStoplight("moderate", "Suburban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                numberOfAccidents = measureNumberOfAccidentsBefore("heavy", "Suburban");
+                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Suburban") * 7) + (numberOfAccidentsAtGreenStoplight("heavy", "Suburban") * 3);
             }
         }
         return numberOfAccidents;
