@@ -50,19 +50,17 @@ April 3 Deliverables:
 2. Apply algorithm to traffic flow simulations developed for March 6th deliverables.
 
 May 1 Deliverables:
-1. Measure improvements in commuting time, safety, fuel usage, and traffic flow from current stoplight operation to STM operation.
+1. Measure improvements in commuting time and cost of gas used from current stoplight operation to STM operation.
 2. Compare improvements in measured areas.
-3. Include results in final report
+3. Include results in final report.
 
 ------------------------------------------------------------------------
 PRODUCT/LIVE DEMONSTRATION
 ------------------------------------------------------------------------
 The Smart Traffic Model is a software program that would alter traffic light patterns through application of a predictive algorithm to achieve the stated objectives. 
 This will be demonstrated on a 25X25 grid displaying different traffic simulations and comparing them to the original stoplight design by measuring:
-1.	Time from Point A to Point B.
-2.	Number of cars passing through light.
-3.	Number of wrecks 
-4.	Amount of fuel used
+1. Commuting time from Point A to Point B.
+2. The cost of gas used to get from Point A to Point B.
 
 ------------------------------------------------------------------------
 REALITY CHECK
@@ -75,4 +73,4 @@ Using Java BlueJ.
 CONCLUSION
 ------------------------------------------------------------------------
 The Smart Traffic Model aims to help drivers improve their commuting time and improve their gas mileage/fuel usage.
-It also strives to create a safet environment on the roads, decreasing the amount of wrecks and increasing the amount of traffic flow though intersections.
+It also strives to create a safer environment on the roads, decreasing the amount of wrecks and increasing the amount of traffic flow though intersections.
