@@ -1,4 +1,4 @@
-SMART TRAFFIC MODEL (SMT) by SIERRA KNOWLES
+SMART TRAFFIC MODEL (SMT) by NUCLEARRKTSNOWFLAKE
 
 Stoplights are an essential part of our transportation infrastructure.
 They strive to maximize intersection safety and efficiency for both vehicles and pedestrians. 
