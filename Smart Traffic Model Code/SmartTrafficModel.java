@@ -16,6 +16,7 @@ import java.io.*;
 public class SmartTrafficModel{
     private static int commutingTime;
     private static int gasMileage;
+    private static double price;
     /**
      * This method creates the Smart Traffic Model.
      * 
@@ -340,9 +341,9 @@ public class SmartTrafficModel{
      * 
      * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
-    public static int measureCostOfGasAfter(String trafficFlow, String citySetting){
-        gasMileage = bestGasMileage(trafficFlow, citySetting);
-        return gasMileage;
+    public static double measureCostOfGasAfter(String trafficFlow, String citySetting){
+        price = bestCostOfGas(trafficFlow, citySetting);
+        return price;
     }
 
     ///**
@@ -462,31 +463,31 @@ public class SmartTrafficModel{
      * 
      * @return gasUsed - The approximated gas used at passing through a green stop light.
      */
-    public static int costOfGasAtGreenStoplight(String trafficFlow, String citySetting){
-        int gasUsed = 0;
+    public static double costOfGasAtGreenStoplight(String trafficFlow, String citySetting){
+        double cost = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasUsed = 0;
+                cost = .09; //dollars
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 1;
+                cost = .10; //dollars
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 2;
-            }
+                cost = .11; //dollars
+            } 
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasUsed = 0;
+                cost = .08; //dollars
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 0;
+                cost = .09; //dollars
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 1;
+                cost = .10; //dollars
             }
         }
-        return gasUsed;
+        return cost;
     }
 
     /**
@@ -497,33 +498,33 @@ public class SmartTrafficModel{
      * 
      * @return gasUsed - The approximated gas wasted while idling at a red light.
      */
-    public static int costOfGasAtRedStoplight(String trafficFlow, String citySetting){
+    public static double costOfGasAtRedStoplight(String trafficFlow, String citySetting){
         //National Average Gas Price (Regular Unleaded) as of : $2.615
         //National Average Gas Mileage of all Cars: 29 MPG
-        int gasUsed = 0;
+        double cost = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasUsed = 0; //0.0125
+                cost = .10; //dollars
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 0; //0.0236
+                cost = .11; //dollars
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 0; //0.0333
-            }
+                cost = .12; //dollars
+            } 
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasUsed = 0; //0.008333
+                cost = .09; //dollars
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 0; //0.01666
+                cost = .10; //dollars
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 0; //0.02777
+                cost = .11; //dollars
             }
         }
-        return gasUsed;
+        return cost;
     }
 
     //The following methods pertain to different possible traffic light simulations that will allow me to obtain approximate results.
@@ -607,30 +608,30 @@ public class SmartTrafficModel{
      * 
      * @return gasMileage - The approximated gas mileage for 5 green lights and 5 red lights.
      */
-    public static int bestGasMileage(String trafficFlow, String citySetting){
+    public static double bestCostOfGas(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
+                 price = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
+                price = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
+                price = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
+                price = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
+                price = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
+                price = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
             }
         }
-        return gasMileage;
+        return price;
     }
 
     /**
@@ -642,29 +643,29 @@ public class SmartTrafficModel{
      * 
      * @return gasMileage - The approximated gas mileage for 5 green lights and 5 red lights for cross traffic.
      */
-    public static int bestGasMileageCross(String trafficFlow, String citySetting){
+    public static double bestGasMileageCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
+                 price = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
+                price = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
+                price = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
+                price = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
+                price = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
+                price = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
             }
         }
-        return gasMileage;
+        return price;
     }
 }
