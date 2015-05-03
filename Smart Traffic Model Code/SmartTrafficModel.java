@@ -89,12 +89,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -104,12 +102,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -119,12 +115,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -134,12 +128,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -149,12 +141,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -182,12 +172,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -197,12 +185,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -212,12 +198,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -227,12 +211,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -242,12 +224,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageBefore(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsBefore(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureGasMileageAfter(trafficFlow, citySetting));
-                        System.out.println("Number of Accidents: " + measureNumberOfAccidentsAfter(trafficFlow, citySetting));
+                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -270,6 +250,9 @@ public class SmartTrafficModel{
     public static int measureCommutingTimeBefore(String trafficFlow, String citySetting){
         //4 minutes to go 1 mile w/ traffic.
         //3 minutes to go 1 mile w/o traffic.
+        //1 stoplight per block
+        //Short city blocks: 20 city blocks per mile (A standard Manhattan City Block is 264 ft by 900 ft)
+        //Long city blocks: 10 city blocks per mile
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
                 commutingTime = 40; //4 minutes per mile
@@ -303,11 +286,12 @@ public class SmartTrafficModel{
      * 
      * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
-    public static int measureGasMileageBefore(String trafficFlow, String citySetting){
+    public static int measureCostOfGasBefore(String trafficFlow, String citySetting){
+        //National Average Gas Price (Regular Unleaded) as of : $2.615
+        //National Average Gas Mileage of all Cars: 29 MPG
+        //0.61 cents per mile.
         int milesDriven;
-        int numOfStopLights; //1 stoplight per block
-        //Short city blocks: 20 city blocks per mile (A standard Manhattan City Block is 264 ft by 900 ft)
-        //Long city blocks: 10 city blocks per mile
+        int numOfStopLights; 
         int gasUsed;
         int gasMileage = 0; //Average across board is approx. 25
         if(citySetting == "Urban"){
@@ -343,46 +327,7 @@ public class SmartTrafficModel{
             }
         }
         return gasMileage;       
-        //Gas varies with traffic flow.
-        //Divide gas
-        //Calculate gas mileage for all green lights and add on time for every red light.
-    }
-
-    /**
-     * This method measures the number of accidents that occured during the scenario/simulation before the SMT is applied.
-     * 
-     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return numAccidents - The approximate number of accidents before the SMT is applied.
-     */
-    public static int measureNumberOfAccidentsBefore(String trafficFlow, String citySetting){
-        int numAccidents = 0;
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numAccidents = 1;
-            }
-            else if(trafficFlow == "moderate"){
-                numAccidents = 3;
-            }
-            else if(trafficFlow == "heavy"){
-                numAccidents = 5;
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numAccidents = 0;
-            }
-            else if(trafficFlow == "moderate"){
-                numAccidents = 2;
-            }
-            else if(trafficFlow == "heavy"){
-                numAccidents = 4;
-            }
-        }
-        return numAccidents;
-        //Approximate number of accidents.
-        //Pull up statistics.
+        //Take MPG and divide by price of gas
     }
 
     /**
@@ -406,22 +351,9 @@ public class SmartTrafficModel{
      * 
      * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
-    public static int measureGasMileageAfter(String trafficFlow, String citySetting){
+    public static int measureCostOfGasAfter(String trafficFlow, String citySetting){
         gasMileage = bestGasMileage(trafficFlow, citySetting);
         return gasMileage;
-    }
-
-    /**
-     * This method measures the number of accidents that occured during the scenario/simulation after the SMT is applied.
-     * 
-     * @param trafficFlow - The traffic flow depnding on time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return numberOfAccidents - The approximated number of accidents after the SMT is applied.
-     */
-    public static int measureNumberOfAccidentsAfter(String trafficFlow, String citySetting){
-        numberOfAccidents = bestNumberOfAccidents(trafficFlow, citySetting);
-        return numberOfAccidents;
     }
 
     ///**
@@ -541,7 +473,7 @@ public class SmartTrafficModel{
      * 
      * @return gasUsed - The approximated gas used at passing through a green stop light.
      */
-    public static int gasUsedAtGreenStoplight(String trafficFlow, String citySetting){
+    public static int costOfGasAtGreenStoplight(String trafficFlow, String citySetting){
         int gasUsed = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
@@ -576,9 +508,9 @@ public class SmartTrafficModel{
      * 
      * @return gasUsed - The approximated gas wasted while idling at a red light.
      */
-    public static int gasUsedAtRedStoplight(String trafficFlow, String citySetting){
-        //A quarter of a gallon is wasted every 15 minutes.
-        //Source: http://boston.cbslocal.com/2011/01/31/curious-about-how-much-gas-is-used-while-idling-car/
+    public static int costOfGasAtRedStoplight(String trafficFlow, String citySetting){
+        //National Average Gas Price (Regular Unleaded) as of : $2.615
+        //National Average Gas Mileage of all Cars: 29 MPG
         int gasUsed = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
@@ -759,24 +691,24 @@ public class SmartTrafficModel{
     public static int bestGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 5) + (gasUsedAtGreenStoplight("light", "Urban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 5) + (gasUsedAtGreenStoplight("moderate", "Urban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Urban") * 5) + (gasUsedAtGreenStoplight("heavy", "Urban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Suburban") * 5) + (gasUsedAtGreenStoplight("light", "Suburban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Suburban") * 5) + (gasUsedAtGreenStoplight("moderate", "Suburban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Suburban") * 5) + (gasUsedAtGreenStoplight("heavy", "Suburban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
             }
         }
         return gasMileage;
@@ -794,99 +726,29 @@ public class SmartTrafficModel{
     public static int bestGasMileageCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 5) + (gasUsedAtGreenStoplight("light", "Urban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 5) + (gasUsedAtGreenStoplight("moderate", "Urban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Urban") * 5) + (gasUsedAtGreenStoplight("heavy", "Urban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Suburban") * 5) + (gasUsedAtGreenStoplight("light", "Suburban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Suburban") * 5) + (gasUsedAtGreenStoplight("moderate", "Suburban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Suburban") * 5) + (gasUsedAtGreenStoplight("heavy", "Suburban") * 5);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
             }
         }
         return gasMileage;
     }
 
-    /**
-     * This method represents the "best" traffic simulation.
-     * Alternate Red-Green.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @param numberOfAccidents - The approximated number of accidents for 5 green lights and 5 red lights.
-     */
-    public static int bestNumberOfAccidents(String trafficFlow, String citySetting){
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Urban") * 5) + (numberOfAccidentsAtGreenStoplight("light", "Urban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Urban") * 5) + (numberOfAccidentsAtGreenStoplight("moderate", "Urban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Urban") * 5) + (numberOfAccidentsAtGreenStoplight("heavy", "Urban") * 5);
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Suburban") * 5) + (numberOfAccidentsAtGreenStoplight("light", "Suburban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Suburban") * 5) + (numberOfAccidentsAtGreenStoplight("moderate", "Suburban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Suburban") * 5) + (numberOfAccidentsAtGreenStoplight("heavy", "Suburban") * 5);
-            }
-        }
-        return numberOfAccidents;
-    }
-
-    /**
-     * This method represents the "best" traffic simulation.
-     * Alternate Red-Green for cross traffic.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @param numberOfAccidents - The approximated number of accidents for 5 green lights and 5 red lights for cross traffic.
-     */
-    public static int bestNumberOfAccidentsCross(String trafficFlow, String citySetting){
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Urban") * 5) + (numberOfAccidentsAtGreenStoplight("light", "Urban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Urban") * 5) + (numberOfAccidentsAtGreenStoplight("moderate", "Urban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Urban") * 5) + (numberOfAccidentsAtGreenStoplight("heavy", "Urban") * 5);
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Suburban") * 5) + (numberOfAccidentsAtGreenStoplight("light", "Suburban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Suburban") * 5) + (numberOfAccidentsAtGreenStoplight("moderate", "Suburban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Suburban") * 5) + (numberOfAccidentsAtGreenStoplight("heavy", "Suburban") * 5);
-            }
-        }
-        return numberOfAccidents;
-    }
-    
     /**
      * This method represents a traffic simulation.
      * Alternate 1 Red-2 Green.
@@ -967,24 +829,24 @@ public class SmartTrafficModel{
     public static int betterGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 3) + (gasUsedAtGreenStoplight("light", "Urban") * 7);
+                gasMileage = (costOfGasAtRedStoplight("light", "Urban") * 3) + (costOfGasAtGreenStoplight("light", "Urban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 3) + (gasUsedAtGreenStoplight("moderate", "Urban") * 7);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Urban") * 3) + (costOfGasAtGreenStoplight("moderate", "Urban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Urban") * 3) + (gasUsedAtGreenStoplight("heavy", "Urban") * 7);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Urban") * 3) + (costOfGasAtGreenStoplight("heavy", "Urban") * 7);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Suburban") * 3) + (gasUsedAtGreenStoplight("light", "Suburban") * 7);
+                gasMileage = (costOfGasAtRedStoplight("light", "Suburban") * 3) + (costOfGasAtGreenStoplight("light", "Suburban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Suburban") * 3) + (gasUsedAtGreenStoplight("moderate", "Suburban") * 7);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Suburban") * 3) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Suburban") * 3) + (gasUsedAtGreenStoplight("heavy", "Suburban") * 7);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Suburban") * 3) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 7);
             }
         }
         return gasMileage;
@@ -1002,96 +864,26 @@ public class SmartTrafficModel{
     public static int betterGasMileageCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 7) + (gasUsedAtGreenStoplight("light", "Urban") * 3);
+                gasMileage = (costOfGasAtRedStoplight("light", "Urban") * 7) + (costOfGasAtGreenStoplight("light", "Urban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 7) + (gasUsedAtGreenStoplight("moderate", "Urban") * 3);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Urban") * 7) + (costOfGasAtGreenStoplight("moderate", "Urban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Urban") * 7) + (gasUsedAtGreenStoplight("heavy", "Urban") * 3);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Urban") * 7) + (costOfGasAtGreenStoplight("heavy", "Urban") * 3);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                gasMileage = (gasUsedAtRedStoplight("light", "Suburban") * 7) + (gasUsedAtGreenStoplight("light", "Suburban") * 3);
+                gasMileage = (costOfGasAtRedStoplight("light", "Suburban") * 7) + (costOfGasAtGreenStoplight("light", "Suburban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                gasMileage = (gasUsedAtRedStoplight("moderate", "Suburban") * 7) + (gasUsedAtGreenStoplight("moderate", "Suburban") * 3);
+                gasMileage = (costOfGasAtRedStoplight("moderate", "Suburban") * 7) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                gasMileage = (gasUsedAtRedStoplight("heavy", "Suburban") * 7) + (gasUsedAtGreenStoplight("heavy", "Suburban") * 3);
+                gasMileage = (costOfGasAtRedStoplight("heavy", "Suburban") * 7) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 3);
             }
         }
         return gasMileage;
-    }
-
-    /**
-     * This method represents the "before" going ten blocks number of accidents. 
-     * Alternate 1 Red-2 Green.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return numberOfAccidents - The approximated number of accidents for 7 green lights and 3 red lights.
-     */
-    public static int betterNumberOfAccidents(String trafficFlow, String citySetting){
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Urban") * 3) + (numberOfAccidentsAtGreenStoplight("light", "Urban") * 7);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Urban") * 3) + (numberOfAccidentsAtGreenStoplight("moderate", "Urban") * 7);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Urban") * 3) + (numberOfAccidentsAtGreenStoplight("heavy", "Urban") * 7);
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Suburban") * 3) + (numberOfAccidentsAtGreenStoplight("light", "Suburban") * 7);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Suburban") * 3) + (numberOfAccidentsAtGreenStoplight("moderate", "Suburban") * 7);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Suburban") * 3) + (numberOfAccidentsAtGreenStoplight("heavy", "Suburban") * 7);
-            }
-        }
-        return numberOfAccidents;
-    }
-
-    /**
-     * This method represents the "before" going ten blocks number of accidents. 
-     * Alternate 1 Red-2 Green for cross traffic.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return numberOfAccidents - The approximated number of accidents for 3 green lights and 7 red lights for cross traffic.
-     */
-    public static int betterNumberOfAccidentsCross(String trafficFlow, String citySetting){
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Urban") * 7) + (numberOfAccidentsAtGreenStoplight("light", "Urban") * 3);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Urban") * 7) + (numberOfAccidentsAtGreenStoplight("moderate", "Urban") * 3);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Urban") * 7) + (numberOfAccidentsAtGreenStoplight("heavy", "Urban") * 3);
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("light", "Suburban") * 7) + (numberOfAccidentsAtGreenStoplight("light", "Suburban") * 3);
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("moderate", "Suburban") * 7) + (numberOfAccidentsAtGreenStoplight("moderate", "Suburban") * 3);
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfAccidents = (numberOfAccidentsAtRedStoplight("heavy", "Suburban") * 7) + (numberOfAccidentsAtGreenStoplight("heavy", "Suburban") * 3);
-            }
-        }
-        return numberOfAccidents;
     }
 }
