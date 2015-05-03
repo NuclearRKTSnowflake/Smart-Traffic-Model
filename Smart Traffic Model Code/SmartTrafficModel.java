@@ -15,7 +15,6 @@ import java.io.*;
  */
 public class SmartTrafficModel{
     private static int commutingTime;
-    private static int numberOfAccidents;
     private static int gasMileage;
     /**
      * This method creates the Smart Traffic Model.
@@ -25,9 +24,8 @@ public class SmartTrafficModel{
      * @param numAccidents - The number of accidents at the stoplight/intersection.
      * @param mpg - The gas mileage (mpg) of the cars passing through the stoplight/intersection. 
      */
-    public SmartTrafficModel(int comTime, int numAccidents, int mpg){
+    public SmartTrafficModel(int comTime, int mpg){
         comTime = commutingTime;
-        numAccidents = numberOfAccidents;
         mpg = gasMileage;
     }
 
@@ -235,6 +233,9 @@ public class SmartTrafficModel{
                         System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
                     }
                 }
+                else{
+                    System.out.println("Sorry, the SMT cannot interpret your input. Please try again.");
+                }
             }
         }
     }
@@ -286,47 +287,35 @@ public class SmartTrafficModel{
      * 
      * @return gasMileage - The average gas mileage. (Average gas mileage is approximately 25).
      */
-    public static int measureCostOfGasBefore(String trafficFlow, String citySetting){
+    public static double measureCostOfGasBefore(String trafficFlow, String citySetting){
         //National Average Gas Price (Regular Unleaded) as of : $2.615
         //National Average Gas Mileage of all Cars: 28 MPG
         //0.10 cents per mile.
-        int milesDriven;
-        int numOfStopLights; 
-        int gasUsed;
-        int gasMileage = 0; //Average across board is approx. 25
+        //One Mile is approx. 20 short city blocks or 10 long city blocks.
+        double cost = 0;
         if(citySetting == "Urban"){
-            milesDriven = 10; //One Mile is approx. 20 short city blocks or 10 long city blocks.
-            numOfStopLights = 200;
             if(trafficFlow == "light"){
-                gasUsed = 2;
-                gasMileage = milesDriven / gasUsed;
+                cost = 1.0; //10 cents per mile * 10 miles.
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 5;
-                gasMileage = milesDriven / gasUsed;
+                cost = 1.1; //11 cents per mile * 10 miles.
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 7;
-                gasMileage = milesDriven / gasUsed;
+                cost = 1.2; //12 cents per mile * 10 miles.
             }
         }
         else if(citySetting == "Suburban"){
-            milesDriven = 10; //One Mile is 1 sub block.
-            numOfStopLights = 10;
             if(trafficFlow == "light"){
-                gasUsed = 2;
-                gasMileage = milesDriven / gasUsed;
+                cost = .90; //9 cents per mile * 10 miles.
             }
             else if(trafficFlow == "moderate"){
-                gasUsed = 5;
-                gasMileage = milesDriven / gasUsed;
+                cost = 1.0; //10 cents per mile * 10 miles.
             }
             else if(trafficFlow == "heavy"){
-                gasUsed = 7;
-                gasMileage = milesDriven / gasUsed;
+                cost = 1.1; //11 cents per mile * 10 miles.
             }
-        }
-        return gasMileage;       
+        } 
+        return cost;
         //Take MPG and divide by price of gas
     }
 
