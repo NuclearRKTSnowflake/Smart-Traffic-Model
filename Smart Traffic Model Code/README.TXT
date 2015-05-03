@@ -72,5 +72,5 @@ Using Java BlueJ.
 ------------------------------------------------------------------------
 CONCLUSION
 ------------------------------------------------------------------------
-The Smart Traffic Model aims to help drivers improve their commuting time and improve their gas mileage/fuel usage.
-It also strives to create a safer environment on the roads, decreasing the amount of wrecks and increasing the amount of traffic flow though intersections.
+The Smart Traffic Model aims to help drivers improve their commuting time and improve their money spent on gas used commuting from Point A to Point B. 
+It also strives to create a safer environment on the roads, decreasing the amount of wrecks and increasing the amount of traffic flow through intersections. 
