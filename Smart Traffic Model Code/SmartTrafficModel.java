@@ -268,15 +268,17 @@ public class SmartTrafficModel{
      * @return commutingTime - The approximated commuting time according to the time of day and the city setting.
      */
     public static int measureCommutingTimeBefore(String trafficFlow, String citySetting){
+        //4 minutes to go 1 mile w/ traffic.
+        //3 minutes to go 1 mile w/o traffic.
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = 40; //40 //4 minutes per block
+                commutingTime = 40; //4 minutes per mile
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = 80; //80 //60 + (0.50)(60)
+                commutingTime = 60; //80 //40 + (0.50)(40)
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = 95; //95 //60 + (0.75)(60)
+                commutingTime = 70; //40 + (0.75)(40)
             }
         }
         else if(citySetting == "Suburban"){
@@ -468,28 +470,28 @@ public class SmartTrafficModel{
      * 
      * @return timeTaken - The approximated time it takes to pass through a green stop light.
      */
-    public static int timeAtGreenStoplight(String trafficFlow, String citySetting){
+    public static int timePerMileAtGreenStoplight(String trafficFlow, String citySetting){
         int timeTaken = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                timeTaken = 10; //seconds
+                timeTaken = 3; //minutes
             }
             else if(trafficFlow == "moderate"){
-                timeTaken = 20; //seconds
+                timeTaken = 5; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 45; //seconds
+                timeTaken = 7; //minutes
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                timeTaken = 5; //seconds
+                timeTaken = 2; //minutes
             }
             else if(trafficFlow == "moderate"){
-                timeTaken = 10; //seconds
+                timeTaken = 3; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 30; //seconds
+                timeTaken = 4; //minutes
             }
         }
         return timeTaken;
@@ -503,29 +505,29 @@ public class SmartTrafficModel{
      * 
      * @return timeTaken - The approximated time taken waiting at a red stop light.
      */
-    public static int timeAtRedStoplight(String trafficFlow, String citySetting){
+    public static int timePerMileAtRedStoplight(String trafficFlow, String citySetting){
         //Red lights typically don't last longer than 1 1/2 to 2 minutes in heavy traffic.
         int timeTaken = 0;
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                timeTaken = 45; //seconds
+                timeTaken = 4; //minutes
             }
             else if(trafficFlow == "moderate"){
-                timeTaken = 85; //seconds
+                timeTaken = 6; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 120; //seconds
+                timeTaken = 8; //minutes
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                timeTaken = 30; //seconds
+                timeTaken = 2; //minutes
             }
             else if(trafficFlow == "moderate"){
-                timeTaken = 60; //seconds
+                timeTaken = 4; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 100; //seconds
+                timeTaken = 5; //minutes
             }
         }
         return timeTaken;
@@ -687,24 +689,24 @@ public class SmartTrafficModel{
     public static int bestCommutingTime(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Urban") * 5) + (timeAtGreenStoplight("light", "Urban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("light", "Urban") * 5) + (timePerMileAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 5) + (timeAtGreenStoplight("moderate", "Urban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Urban") * 5) + (timePerMileAtGreenStoplight("moderate", "Urban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 5) + (timeAtGreenStoplight("heavy", "Urban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Urban") * 5) + (timePerMileAtGreenStoplight("heavy", "Urban") * 5);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Suburban") * 5) + (timeAtGreenStoplight("light", "Suburban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("light", "Suburban") * 5) + (timePerMileAtGreenStoplight("light", "Suburban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 5) + (timeAtGreenStoplight("moderate", "Suburban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Suburban") * 5) + (timePerMileAtGreenStoplight("moderate", "Suburban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 5) + (timeAtGreenStoplight("heavy", "Suburban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Suburban") * 5) + (timePerMileAtGreenStoplight("heavy", "Suburban") * 5);
             }
         }
         return commutingTime;
@@ -722,28 +724,27 @@ public class SmartTrafficModel{
     public static int bestCommutingTimeCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Urban") * 5) + (timeAtGreenStoplight("light", "Urban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("light", "Urban") * 5) + (timePerMileAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 5) + (timeAtGreenStoplight("moderate", "Urban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Urban") * 5) + (timePerMileAtGreenStoplight("moderate", "Urban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 5) + (timeAtGreenStoplight("heavy", "Urban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Urban") * 5) + (timePerMileAtGreenStoplight("heavy", "Urban") * 5);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Suburban") * 5) + (timeAtGreenStoplight("light", "Suburban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("light", "Suburban") * 5) + (timePerMileAtGreenStoplight("light", "Suburban") * 5);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 5) + (timeAtGreenStoplight("moderate", "Suburban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Suburban") * 5) + (timePerMileAtGreenStoplight("moderate", "Suburban") * 5);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 5) + (timeAtGreenStoplight("heavy", "Suburban") * 5);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Suburban") * 5) + (timePerMileAtGreenStoplight("heavy", "Suburban") * 5);
             }
         }
         return commutingTime;
-        //Same for cross traffic.
     }
 
     /**
@@ -758,7 +759,7 @@ public class SmartTrafficModel{
     public static int bestGasMileage(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                gasMileage = (timeAtRedStoplight("light", "Urban") * 5) + (timeAtGreenStoplight("light", "Urban") * 5);
+                gasMileage = (gasUsedAtRedStoplight("light", "Urban") * 5) + (gasUsedAtGreenStoplight("light", "Urban") * 5);
             }
             else if(trafficFlow == "moderate"){
                 gasMileage = (gasUsedAtRedStoplight("moderate", "Urban") * 5) + (gasUsedAtGreenStoplight("moderate", "Urban") * 5);
@@ -898,24 +899,24 @@ public class SmartTrafficModel{
     public static void betterCommutingTime(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Urban") * 3) + (timeAtGreenStoplight("light", "Urban") * 7);
+                commutingTime = (timePerMileAtRedStoplight("light", "Urban") * 3) + (timePerMileAtGreenStoplight("light", "Urban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 3) + (timeAtGreenStoplight("moderate", "Urban") * 7);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Urban") * 3) + (timePerMileAtGreenStoplight("moderate", "Urban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 3) + (timeAtGreenStoplight("heavy", "Urban") * 7);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Urban") * 3) + (timePerMileAtGreenStoplight("heavy", "Urban") * 7);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Suburban") * 3) + (timeAtGreenStoplight("light", "Suburban") * 7);
+                commutingTime = (timePerMileAtRedStoplight("light", "Suburban") * 3) + (timePerMileAtGreenStoplight("light", "Suburban") * 7);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 3) + (timeAtGreenStoplight("moderate", "Suburban") * 7);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Suburban") * 3) + (timePerMileAtGreenStoplight("moderate", "Suburban") * 7);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 3) + (timeAtGreenStoplight("heavy", "Suburban") * 7);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Suburban") * 3) + (timePerMileAtGreenStoplight("heavy", "Suburban") * 7);
             }
         }
     }
@@ -932,24 +933,24 @@ public class SmartTrafficModel{
     public static void betterCommutingTimeCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Urban") * 7) + (timeAtGreenStoplight("light", "Urban") * 3);
+                commutingTime = (timePerMileAtRedStoplight("light", "Urban") * 7) + (timePerMileAtGreenStoplight("light", "Urban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Urban") * 7) + (timeAtGreenStoplight("moderate", "Urban") * 3);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Urban") * 7) + (timePerMileAtGreenStoplight("moderate", "Urban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Urban") * 7) + (timeAtGreenStoplight("heavy", "Urban") * 3);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Urban") * 7) + (timePerMileAtGreenStoplight("heavy", "Urban") * 3);
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                commutingTime = (timeAtRedStoplight("light", "Suburban") * 7) + (timeAtGreenStoplight("light", "Suburban") * 3);
+                commutingTime = (timePerMileAtRedStoplight("light", "Suburban") * 7) + (timePerMileAtGreenStoplight("light", "Suburban") * 3);
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = (timeAtRedStoplight("moderate", "Suburban") * 7) + (timeAtGreenStoplight("moderate", "Suburban") * 3);
+                commutingTime = (timePerMileAtRedStoplight("moderate", "Suburban") * 7) + (timePerMileAtGreenStoplight("moderate", "Suburban") * 3);
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = (timeAtRedStoplight("heavy", "Suburban") * 7) + (timeAtGreenStoplight("heavy", "Suburban") * 3);
+                commutingTime = (timePerMileAtRedStoplight("heavy", "Suburban") * 7) + (timePerMileAtGreenStoplight("heavy", "Suburban") * 3);
             }
         }
     }
