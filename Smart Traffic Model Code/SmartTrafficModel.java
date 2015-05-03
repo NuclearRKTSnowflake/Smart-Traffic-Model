@@ -255,13 +255,13 @@ public class SmartTrafficModel{
         //Long city blocks: 10 city blocks per mile
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
-                commutingTime = 40; //4 minutes per mile
+                commutingTime = 50; //5 minutes per mile
             }
             else if(trafficFlow == "moderate"){
-                commutingTime = 60; //80 //40 + (0.50)(40)
+                commutingTime = 60; //6 minutes per mile.
             }
             else if(trafficFlow == "heavy"){
-                commutingTime = 70; //40 + (0.75)(40)
+                commutingTime = 70; //7 minutes per mile.
             }
         }
         else if(citySetting == "Suburban"){
@@ -288,8 +288,8 @@ public class SmartTrafficModel{
      */
     public static int measureCostOfGasBefore(String trafficFlow, String citySetting){
         //National Average Gas Price (Regular Unleaded) as of : $2.615
-        //National Average Gas Mileage of all Cars: 29 MPG
-        //0.61 cents per mile.
+        //National Average Gas Mileage of all Cars: 28 MPG
+        //0.10 cents per mile.
         int milesDriven;
         int numOfStopLights; 
         int gasUsed;
@@ -535,76 +535,6 @@ public class SmartTrafficModel{
             }
         }
         return gasUsed;
-    }
-
-    /**
-     * This method approximates the number of crashes at a green stop light depending on the traffic flow and city setting.
-     * 
-     * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return numberOfCrashes - The approximated amount of crashes passing through a green stop light.
-     */
-    public static int numberOfAccidentsAtGreenStoplight(String trafficFlow, String citySetting){
-        int numberOfCrashes = 0;
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numberOfCrashes = 0;
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfCrashes = 1;
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfCrashes = 2;
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numberOfCrashes = 0;
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfCrashes = 0;
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfCrashes = 1;
-            }
-        }
-        return numberOfCrashes;
-    }
-
-    /**
-     * This method approximates the number of crashes at a red stop light depending on traffic flow and city setting.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return numberOfCrashes - The approximated gas wasted while idling at a red light.
-     */
-    public static int numberOfAccidentsAtRedStoplight(String trafficFlow, String citySetting){
-        int numberOfCrashes = 0;
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                numberOfCrashes = 0;
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfCrashes = 1;
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfCrashes = 2;
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                numberOfCrashes = 0;
-            }
-            else if(trafficFlow == "moderate"){
-                numberOfCrashes = 0;
-            }
-            else if(trafficFlow == "heavy"){
-                numberOfCrashes = 1;
-            }
-        }
-        return numberOfCrashes;
     }
 
     //The following methods pertain to different possible traffic light simulations that will allow me to obtain approximate results.
