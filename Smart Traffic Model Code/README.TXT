@@ -58,9 +58,9 @@ May 1 Deliverables:
 PRODUCT/LIVE DEMONSTRATION
 ------------------------------------------------------------------------
 The Smart Traffic Model is a software program that would alter traffic light patterns through application of a predictive algorithm to achieve the stated objectives. 
-This will be demonstrated on a 25X25 grid displaying different traffic simulations and comparing them to the original stoplight design by measuring:
-1. Commuting time from Point A to Point B.
-2. The cost of gas used to get from Point A to Point B.
+This will be demonstrated with a terminal window from BlueJ that will be able to receive a user’s input and output results that show:
+1.	Commuting time from Point A to Point B.
+2.	Cost of gas used to get from Point A to Point B.
 
 ------------------------------------------------------------------------
 REALITY CHECK
