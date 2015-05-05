@@ -15,19 +15,16 @@ import java.io.*;
  */
 public class SmartTrafficModel{
     private static int commutingTime;
-    private static int gasMileage;
     private static double price;
     /**
      * This method creates the Smart Traffic Model.
      * 
-     * @param numCars - The number of cars passing through the stoplight/intersection.
      * @param comTime - The amount of time it takes for a car to commute from Point A to Point B.
-     * @param numAccidents - The number of accidents at the stoplight/intersection.
-     * @param mpg - The gas mileage (mpg) of the cars passing through the stoplight/intersection. 
+     * @param p - The price of gas used to commute from Point A to Point B.
      */
-    public SmartTrafficModel(int comTime, int mpg){
+    public SmartTrafficModel(int comTime, double p){
         comTime = commutingTime;
-        mpg = gasMileage;
+        p = price;
     }
 
     /**
@@ -88,10 +85,10 @@ public class SmartTrafficModel{
                         System.out.println("");
                         System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -99,12 +96,12 @@ public class SmartTrafficModel{
                         trafficFlow = "light";
                         timeOfDay = "late morning/afternoon";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -112,12 +109,12 @@ public class SmartTrafficModel{
                         trafficFlow = "moderate";
                         timeOfDay = "late afternoon";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -125,12 +122,12 @@ public class SmartTrafficModel{
                         trafficFlow = "heavy";
                         timeOfDay = "evening";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -138,12 +135,12 @@ public class SmartTrafficModel{
                         trafficFlow = "light";
                         timeOfDay = "night";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -169,12 +166,12 @@ public class SmartTrafficModel{
                         trafficFlow = "heavy";
                         timeOfDay = "morning";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -182,12 +179,12 @@ public class SmartTrafficModel{
                         trafficFlow = "light";
                         timeOfDay = "late morning/afternoon";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -195,12 +192,12 @@ public class SmartTrafficModel{
                         trafficFlow = "moderate";
                         timeOfDay = "late afternoon";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -208,12 +205,12 @@ public class SmartTrafficModel{
                         trafficFlow = "heavy";
                         timeOfDay = "evening";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -221,12 +218,12 @@ public class SmartTrafficModel{
                         trafficFlow = "light";
                         timeOfDay = "night";
                         System.out.println("");
-                        System.out.println("Before SMT is applied:");
+                        System.out.println("Before SMT is applied (Approximated Calculations):");
                         System.out.println("Commuting Time: " + measureCommutingTimeBefore(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasBefore(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasBefore(trafficFlow, citySetting));
                         System.out.println("After SMT is applied:");
                         System.out.println("Commuting Time: " + measureCommutingTimeAfter(trafficFlow, citySetting));
-                        System.out.println("Gas Mileage: " + measureCostOfGasAfter(trafficFlow, citySetting));
+                        System.out.println("Cost of Gas: " + measureCostOfGasAfter(trafficFlow, citySetting));
                         System.out.println("");
                         //exportAsHTML(trafficFlow, timeOfDay, citySetting);
                     }
@@ -281,7 +278,7 @@ public class SmartTrafficModel{
     }
 
     /**
-     * This method measures the gas mileage (mpg) of the cars from Point A to Point B during the scenario/simulation before the SMT is applied.
+     * This method measures the cost of gas used of the cars from Point A to Point B during the scenario/simulation before the SMT is applied.
      * 
      * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
@@ -385,7 +382,7 @@ public class SmartTrafficModel{
     //}
 
     /**
-     * This method approximates the time it takes to pass through a green stop light depending on the traffic flow and city setting.
+     * This method approximates the time it takes to pass through a green stop light depending on the traffic flow and city setting per mile.
      * 
      * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
@@ -456,12 +453,12 @@ public class SmartTrafficModel{
     }
 
     /**
-     * This method approximates the amount of gas used to pass through a green stop light depending on the traffic flow and city setting.
+     * This method approximates the cost of gas used to go 10 miles with green lights depending on traffic flow and city setting.
      * 
      * @param trafficFlow - The traffic flow depending on time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
      * 
-     * @return gasUsed - The approximated gas used at passing through a green stop light.
+     * @return gasUsed - The approximated cost of gas used.
      */
     public static double costOfGasAtGreenStoplight(String trafficFlow, String citySetting){
         double cost = 0;
@@ -491,12 +488,12 @@ public class SmartTrafficModel{
     }
 
     /**
-     * This method approximates the amount of gas used at a red stop light depending on traffic flow and city setting.
+     * This method approximates the cost of gas used to go 10 miles with red lights depending on traffic flow and city setting.
      * 
      * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
      * @param citySetting - The city setting (Urban/Suburban).
      * 
-     * @return gasUsed - The approximated gas wasted while idling at a red light.
+     * @return gasUsed - The approximated cost of gas wasted.
      */
     public static double costOfGasAtRedStoplight(String trafficFlow, String citySetting){
         //National Average Gas Price (Regular Unleaded) as of : $2.615
@@ -563,42 +560,7 @@ public class SmartTrafficModel{
         }
         return commutingTime;
     }
-
-    /**
-     * This method representing the "best" traffic simulation.
-     * Alternate Red-Green for cross traffic.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return commutingTime - The approximated commuting time for 5 green lights and 5 red lights for cross traffic.
-     */
-    public static int bestCommutingTimeCross(String trafficFlow, String citySetting){
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                commutingTime = (timePerMileAtRedStoplight("light", "Urban") * 5) + (timePerMileAtGreenStoplight("light", "Urban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                commutingTime = (timePerMileAtRedStoplight("moderate", "Urban") * 5) + (timePerMileAtGreenStoplight("moderate", "Urban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                commutingTime = (timePerMileAtRedStoplight("heavy", "Urban") * 5) + (timePerMileAtGreenStoplight("heavy", "Urban") * 5);
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                commutingTime = (timePerMileAtRedStoplight("light", "Suburban") * 5) + (timePerMileAtGreenStoplight("light", "Suburban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                commutingTime = (timePerMileAtRedStoplight("moderate", "Suburban") * 5) + (timePerMileAtGreenStoplight("moderate", "Suburban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                commutingTime = (timePerMileAtRedStoplight("heavy", "Suburban") * 5) + (timePerMileAtGreenStoplight("heavy", "Suburban") * 5);
-            }
-        }
-        return commutingTime;
-    }
-
+    
     /**
      * This method represents the "best" traffic simulation.
      * Alternate Red-Green.
@@ -609,41 +571,6 @@ public class SmartTrafficModel{
      * @return gasMileage - The approximated gas mileage for 5 green lights and 5 red lights.
      */
     public static double bestCostOfGas(String trafficFlow, String citySetting){
-        if(citySetting == "Urban"){
-            if(trafficFlow == "light"){
-                 price = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                price = (costOfGasAtRedStoplight("moderate", "Urban") * 5) + (costOfGasAtGreenStoplight("moderate", "Urban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                price = (costOfGasAtRedStoplight("heavy", "Urban") * 5) + (costOfGasAtGreenStoplight("heavy", "Urban") * 5);
-            }
-        }
-        else if(citySetting == "Suburban"){
-            if(trafficFlow == "light"){
-                price = (costOfGasAtRedStoplight("light", "Suburban") * 5) + (costOfGasAtGreenStoplight("light", "Suburban") * 5);
-            }
-            else if(trafficFlow == "moderate"){
-                price = (costOfGasAtRedStoplight("moderate", "Suburban") * 5) + (costOfGasAtGreenStoplight("moderate", "Suburban") * 5);
-            }
-            else if(trafficFlow == "heavy"){
-                price = (costOfGasAtRedStoplight("heavy", "Suburban") * 5) + (costOfGasAtGreenStoplight("heavy", "Suburban") * 5);
-            }
-        }
-        return price;
-    }
-
-    /**
-     * This method represents the "best" traffic simulation.
-     * Alternate Red-Green for cross traffic.
-     * 
-     * @param trafficFlow - The traffic flow depending on the time of day (Light/Moderate/Heavy).
-     * @param citySetting - The city setting (Urban/Suburban).
-     * 
-     * @return gasMileage - The approximated gas mileage for 5 green lights and 5 red lights for cross traffic.
-     */
-    public static double bestGasMileageCross(String trafficFlow, String citySetting){
         if(citySetting == "Urban"){
             if(trafficFlow == "light"){
                  price = (costOfGasAtRedStoplight("light", "Urban") * 5) + (costOfGasAtGreenStoplight("light", "Urban") * 5);
