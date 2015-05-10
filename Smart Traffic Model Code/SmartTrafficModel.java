@@ -399,18 +399,18 @@ public class SmartTrafficModel{
                 timeTaken = 5; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 7; //minutes
+                timeTaken = 6; //minutes
             }
         }
         else if(citySetting == "Suburban"){
             if(trafficFlow == "light"){
-                timeTaken = 2; //minutes
+                timeTaken = 1; //minutes
             }
             else if(trafficFlow == "moderate"){
-                timeTaken = 3; //minutes
+                timeTaken = 2; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 4; //minutes
+                timeTaken = 3; //minutes
             }
         }
         return timeTaken;
@@ -435,7 +435,7 @@ public class SmartTrafficModel{
                 timeTaken = 6; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 8; //minutes
+                timeTaken = 7; //minutes
             }
         }
         else if(citySetting == "Suburban"){
@@ -443,10 +443,10 @@ public class SmartTrafficModel{
                 timeTaken = 2; //minutes
             }
             else if(trafficFlow == "moderate"){
-                timeTaken = 4; //minutes
+                timeTaken = 3; //minutes
             }
             else if(trafficFlow == "heavy"){
-                timeTaken = 5; //minutes
+                timeTaken = 4; //minutes
             }
         }
         return timeTaken;
