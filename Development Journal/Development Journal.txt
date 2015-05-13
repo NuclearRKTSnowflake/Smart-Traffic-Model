@@ -499,7 +499,8 @@ Week #15:
 		Continued working on my final presentation.
 
 	Tuesday--May 12, 2015
-		Continued working on my final presentation.
+		Continued working on my final presentation. Got rid of my Results, Classes, and Methods slides, and 
+		replaced them with slides that show the progress of my work over time.
 
 	Wednesday--May 13, 2015
 		(?)
